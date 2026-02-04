@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Pillow.ma
-//Last modified: Tue, Jan 20, 2026 10:42:18 AM
+//Last modified: Sun, Jan 25, 2026 03:17:46 PM
 //Codeset: 932
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "5761AF5D-4ABD-F172-A28A-179F5C6085A6";
+fileInfo "UUID" "EFE40B95-4B7A-53FE-46F9-A09B91283CCC";
 createNode transform -s -n "persp";
 	rename -uid "47E00C4B-4BF6-9D07-891A-63B317E4DA27";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -12.390719475607291 12.088939531332546 -1.7959483866276471 ;
-	setAttr ".r" -type "double3" -52.538352757080496 -2622.199999997873 0 ;
+	setAttr ".t" -type "double3" -9.590860419395387 13.32940283563746 -0.29735393135868238 ;
+	setAttr ".r" -type "double3" -60.938352757087351 -2614.9999999978577 1.0177774980683254e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EBA0AB6F-46E8-6566-E800-59A0DAA89B40";
 	setAttr -k off ".v" no;
@@ -9075,7 +9075,7 @@ createNode groupId -n "groupId6";
 	rename -uid "396DF6DA-4164-44F2-8B24-E69E28614190";
 	setAttr ".ihi" 0;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "98C9C563-4955-F003-15FD-ADA3001DA7FA";
+	rename -uid "657D0A7E-4E2F-DA63-8DE5-89AF4BD8F0BC";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 77;
