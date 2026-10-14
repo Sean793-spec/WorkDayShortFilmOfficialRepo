@@ -1,6 +1,6 @@
-//Maya ASCII 2023 scene
+//Maya ASCII 2026 scene
 //Name: SkellyPickingUpPhoto.ma
-//Last modified: Sun, Mar 22, 2026 12:12:09 AM
+//Last modified: Fri, Apr 17, 2026 02:58:57 PM
 //Codeset: 1252
 file -rdi 1 -ns "DragonGateCaveSet" -rfn "DragonGateCaveSetRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/git/WorkDayShortFilmOfficialRepo/Maya//assets/environment/caveInterior/DragonGateCaveSet.ma";
@@ -20,36 +20,60 @@ file -rdi 2 -ns "roundedRocks" -rfn "DragonGateCaveSet:roundedRocksRN" -op "v=0;
 		 -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/rocks/roundedRocks.ma";
 file -rdi 2 -ns "Bones" -rfn "DragonGateCaveSet:BonesRN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/bones/Bones.ma";
+file -rdi 2 -ns "Material_Ref" -rfn "DragonGateCaveSet:Material_RefRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/Brick/OneDrive/Documents/DGM/DAGV Repos/WorkDayShortFilmOfficialRepo/Maya//assets/Material_Ref.ma";
+file -rdi 2 -ns "DragonGateLighting" -rfn "DragonGateCaveSet:DragonGateLightingRN"
+		 -op "v=0;" -typ "mayaAscii" "D:/GithubStuff/University/WorkDayShortFilmOfficialRepo/Maya//scenes/LightingScenes/DragonGateLighting.ma";
+file -rdi 2 -ns "Stalagmite_4" -rfn "DragonGateCaveSet:Stalagmite_1RN1" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_5" -rfn "DragonGateCaveSet:Stalagmite_2RN1" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_2.ma";
+file -rdi 2 -ns "Stalagmite_6" -rfn "DragonGateCaveSet:Stalagmite_2RN2" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_2.ma";
+file -rdi 2 -ns "Stalagmite_7" -rfn "DragonGateCaveSet:Stalagmite_1RN2" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_8" -rfn "DragonGateCaveSet:Stalagmite_1RN3" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_9" -rfn "DragonGateCaveSet:Stalagmite_1RN4" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_10" -rfn "DragonGateCaveSet:Stalagmite_1RN5" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_11" -rfn "DragonGateCaveSet:Stalagmite_1RN6" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
 file -rdi 1 -ns "Skeleton" -rfn "SkeletonRN" -op "v=0;" -typ "mayaAscii" "C:/git/WorkDayShortFilmOfficialRepo/Maya//assets/characters/skeleton/Skeleton.ma";
+file -rdi 1 -ns "ExtraRenderPasses" -rfn "ExtraRenderPassesRN" -op "v=0;" -typ
+		 "mayaAscii" "D:/GithubStuff/University/WorkDayShortFilmOfficialRepo/Maya//scenes/LightingScenes/ExtraRenderPasses.ma";
 file -r -ns "DragonGateCaveSet" -dr 1 -rfn "DragonGateCaveSetRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/git/WorkDayShortFilmOfficialRepo/Maya//assets/environment/caveInterior/DragonGateCaveSet.ma";
 file -r -ns "Skeleton" -dr 1 -rfn "SkeletonRN" -op "v=0;" -typ "mayaAscii" "C:/git/WorkDayShortFilmOfficialRepo/Maya//assets/characters/skeleton/Skeleton.ma";
-requires maya "2023";
+file -r -ns "ExtraRenderPasses" -dr 1 -rfn "ExtraRenderPassesRN" -op "v=0;" -typ
+		 "mayaAscii" "D:/GithubStuff/University/WorkDayShortFilmOfficialRepo/Maya//scenes/LightingScenes/ExtraRenderPasses.ma";
+requires maya "2026";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.1.1";
-requires "stereoCamera" "10.0";
-currentUnit -l centimeter -a degree -t film;
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiAreaLight"
+		 -nodeType "aiStandardSurface" -nodeType "aiImagerDenoiserOidn" "mtoa" "5.5.4.2";
+currentUnit -l centimeter -a degree -t 12fps;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2023";
-fileInfo "version" "2023";
-fileInfo "cutIdentifier" "202405151550-05a853e76d";
-fileInfo "osv" "Windows 11 Pro v2009 (Build: 26200)";
-fileInfo "UUID" "BEF51324-4006-FD44-F415-C8BE0A6509B5";
+fileInfo "product" "Maya 2026";
+fileInfo "version" "2026";
+fileInfo "cutIdentifier" "202510291147-60ec9eda33";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
+fileInfo "UUID" "3D2A00B7-4AF0-ECA0-71E4-93A5CE70E81A";
 createNode transform -s -n "persp";
 	rename -uid "AFC8EC40-45D7-8333-8D7A-9883F782C9BD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1277.7558566830628 -0.89710977710286954 486.03418655219832 ;
-	setAttr ".r" -type "double3" -5.1383527280669821 -788.59999999999104 0 ;
+	setAttr ".t" -type "double3" -1412.8162717486809 -364.72552481476737 1054.7564348633098 ;
+	setAttr ".r" -type "double3" -11.738352727280468 -697.79999999995675 -4.294005465835709e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "9CBAF172-4946-4FB1-3224-B98B697911F0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1337.5654260654251;
+	setAttr ".coi" 155.36663439427937;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -4.6671104431152344 61.531809666194022 -9.2314300537109375 ;
+	setAttr ".tp" -type "double3" -1468.8182286537869 -397.08039011000028 910.90339833981932 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "C513F849-4E53-1FD5-64E9-E48F41F7811A";
@@ -138,6 +162,7 @@ createNode mesh -n "Photograph_white_box_geoShape" -p "Photograph_white_box_geo"
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49998817527666684 0.50110865564989904 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -161,20 +186,36 @@ createNode parentConstraint -n "Photograph_white_box_geo_parentConstraint1" -p "
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -15.981519400317893 -5.9812789839365337 0.47130275048016301 ;
 	setAttr ".tg[0].tor" -type "double3" 134.60162201515303 64.187104528172412 -29.735398992319826 ;
-	setAttr ".lr" -type "double3" -0.73323864329986821 8.4209904379952167 -20.898469896660902 ;
+	setAttr ".lr" -type "double3" -0.73323864329986377 8.4209904379952096 -20.898469896660906 ;
 	setAttr ".rst" -type "double3" -1469.4415945377916 -401.89716776057264 915.34587290772583 ;
 	setAttr ".rsrr" -type "double3" -0.070044692442533002 -9.6590893999949188 -1.5712055405057237 ;
 	setAttr -k on ".w0";
+createNode transform -n "aiAreaLight1";
+	rename -uid "7EAB134E-4686-D6FD-A9B7-3987D2AFDDF3";
+	setAttr ".t" -type "double3" -1741.3183833610422 -215.9473416347368 877.19004777388523 ;
+	setAttr ".r" -type "double3" -17.632881450624982 -88.33300777009508 5.4666743094632772e-14 ;
+	setAttr ".s" -type "double3" 119.16954990518535 119.16954990518535 119.16954990518535 ;
+createNode aiAreaLight -n "aiAreaLightShape1" -p "aiAreaLight1";
+	rename -uid "BF76D855-44CD-B3E8-EEAE-9C941EA47295";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr -k off ".v";
+	setAttr ".csh" no;
+	setAttr ".rcsh" no;
+	setAttr ".ai_exposure" 18;
+	setAttr ".ai_use_color_temperature" yes;
+	setAttr ".ai_color_temperature" 5000;
+	setAttr ".ai_translator" -type "string" "quad";
+	setAttr ".aal" -type "attributeAlias" 4 "exposure" "aiExposure" "normalize" "aiNormalize" ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "EF7D96E9-41F2-2C59-5FD3-828C82B43A6D";
-	setAttr -s 58 ".lnk";
-	setAttr -s 58 ".slnk";
+	rename -uid "242C46AB-4D18-2FE5-0EAE-F8909FA32EA3";
+	setAttr -s 98 ".lnk";
+	setAttr -s 98 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D58101CE-4226-3B96-9BCF-B5997529DAAD";
+	rename -uid "1EC561F9-4453-9281-9753-4B8986277001";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "41665FD5-4077-1934-9865-4AB98D97FB62";
+	rename -uid "618239DE-406F-2EBD-A16D-518111ED47B0";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E91EC32A-4ED2-DC7F-9A42-A091EAAAABA4";
+	rename -uid "4CA8D2B0-4258-B700-F25A-24A8623CFF78";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -182,13 +223,15 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "720BF69B-4200-C212-2C84-3A8768EACBEA";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "CBB65375-4F07-2FC9-7E92-E39EDF73780A";
+	rename -uid "A6E3F152-4A67-4E76-725F-28B745DF2EA2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "CDAAA94B-4054-83BD-1AA3-39900DEEF8B7";
 	setAttr ".g" yes;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "8ED07ECA-493E-B8A4-B997-1E97914D41E9";
+	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
 	setAttr ".version" -type "string" "5.2.1.1";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=Render_Cam_Shape2;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1  1;Background.Offset=0  0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1  1;Foreground.Offset=0  0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "48311E29-4E0C-A69B-A3DB-44B4F1E7335A";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -197,11 +240,11 @@ createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	setAttr ".ai_translator" -type "string" "exr";
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "35194E59-4192-A89A-375B-B58E13EC2714";
-	setAttr ".output_mode" 0;
 	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
 createNode reference -n "DragonGateCaveSetRN";
 	rename -uid "25386386-4E6D-E520-4C26-F7A2A67F1BE0";
-	setAttr -s 297 ".phl";
+	setAttr -s 296 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -498,91 +541,105 @@ createNode reference -n "DragonGateCaveSetRN";
 	setAttr ".phl[294]" 0;
 	setAttr ".phl[295]" 0;
 	setAttr ".phl[296]" 0;
-	setAttr ".phl[297]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"DragonGateCaveSetRN"
-		"DragonGateCaveSet:roundedRocksRN" 0
-		"DragonGateCaveSet:BonesRN" 0
-		"DragonGateCaveSet:Stalagmite_2RN" 0
-		"DragonGateCaveSet:Stalagmite_1RN" 0
-		"DragonGateCaveSet:DragonGateRN" 0
 		"DragonGateCaveSet:Emergency_ButtonRN" 0
 		"DragonGateCaveSet:DragonGateTorchRN" 0
+		"DragonGateCaveSet:Stalagmite_2RN2" 0
+		"DragonGateCaveSet:DragonGateLightingRN" 0
+		"DragonGateCaveSet:roundedRocksRN" 0
+		"DragonGateCaveSet:Stalagmite_2RN1" 0
+		"DragonGateCaveSet:Stalagmite_2RN" 0
+		"DragonGateCaveSet:BonesRN" 0
+		"DragonGateCaveSet:Stalagmite_1RN" 0
+		"DragonGateCaveSet:DragonGateRN" 0
+		"DragonGateCaveSet:Stalagmite_1RN2" 0
+		"DragonGateCaveSet:Material_RefRN" 0
+		"DragonGateCaveSet:Stalagmite_1RN6" 0
 		"DragonGateCaveSet:Large_BoulderRN" 0
+		"DragonGateCaveSet:Stalagmite_1RN4" 0
+		"DragonGateCaveSet:Stalagmite_1RN5" 0
 		"DragonGateCaveSetRN" 0
+		"DragonGateCaveSet:Stalagmite_1RN3" 0
+		"DragonGateCaveSet:Stalagmite_1RN1" 0
+		"DragonGateCaveSet:DragonGateLightingRN" 2
+		2 "|DragonGateCaveSet:DragonGateLighting:pSphere1|DragonGateCaveSet:DragonGateLighting:light_pSphere1|DragonGateCaveSet:DragonGateLighting:light_pSphere1Shape" 
+		"aiExposure" " 24"
+		2 "|DragonGateCaveSet:DragonGateLighting:pSphere2|DragonGateCaveSet:DragonGateLighting:light_pSphere2|DragonGateCaveSet:DragonGateLighting:light_pSphere2Shape" 
+		"aiExposure" " 24"
 		"DragonGateCaveSet:roundedRocksRN" 14
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock6.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[164]" ""
+		"DragonGateCaveSetRN.placeHolderList[163]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[165]" ""
+		"DragonGateCaveSetRN.placeHolderList[164]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[166]" ""
+		"DragonGateCaveSetRN.placeHolderList[165]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[167]" ""
+		"DragonGateCaveSetRN.placeHolderList[166]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock13.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[168]" ""
+		"DragonGateCaveSetRN.placeHolderList[167]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock9.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[169]" ""
+		"DragonGateCaveSetRN.placeHolderList[168]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock15.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[170]" ""
+		"DragonGateCaveSetRN.placeHolderList[169]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[171]" ""
+		"DragonGateCaveSetRN.placeHolderList[170]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock8.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[172]" ""
+		"DragonGateCaveSetRN.placeHolderList[171]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock11.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[173]" ""
+		"DragonGateCaveSetRN.placeHolderList[172]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock14.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[174]" ""
+		"DragonGateCaveSetRN.placeHolderList[173]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[175]" ""
+		"DragonGateCaveSetRN.placeHolderList[174]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock12.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[176]" ""
+		"DragonGateCaveSetRN.placeHolderList[175]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks|DragonGateCaveSet:roundedRocks:rock7.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[177]" ""
+		"DragonGateCaveSetRN.placeHolderList[176]" ""
 		"DragonGateCaveSet:BonesRN" 9
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Forearm_Bones|DragonGateCaveSet:Bones:Forearm_bones.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[178]" ""
+		"DragonGateCaveSetRN.placeHolderList[177]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Forearm_Bones|DragonGateCaveSet:Bones:Forearm_bones1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[179]" ""
+		"DragonGateCaveSetRN.placeHolderList[178]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Forearm_Bones|DragonGateCaveSet:Bones:Forearm_bones2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[180]" ""
+		"DragonGateCaveSetRN.placeHolderList[179]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Femur_Bones|DragonGateCaveSet:Bones:Femur.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[181]" ""
+		"DragonGateCaveSetRN.placeHolderList[180]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Femur_Bones|DragonGateCaveSet:Bones:Femur1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[182]" ""
+		"DragonGateCaveSetRN.placeHolderList[181]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Femur_Bones|DragonGateCaveSet:Bones:Femur2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[183]" ""
+		"DragonGateCaveSetRN.placeHolderList[182]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Ribs|DragonGateCaveSet:Bones:Broken_ribs.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[184]" ""
+		"DragonGateCaveSetRN.placeHolderList[183]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Ribs|DragonGateCaveSet:Bones:Broken_ribs1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[185]" ""
+		"DragonGateCaveSetRN.placeHolderList[184]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Ribs|DragonGateCaveSet:Bones:Broken_ribs2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[186]" ""
+		"DragonGateCaveSetRN.placeHolderList[185]" ""
 		"DragonGateCaveSet:Stalagmite_2RN" 6
 		2 "|DragonGateCaveSet:Stalagmite_2:Stalagmite2" "translate" " -type \"double3\" 0 -434.47866634019493404 0"
 		
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:Stalagmite_2:Stalagmite2|DragonGateCaveSet:Stalagmite_2:Base.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[62]" ""
+		"DragonGateCaveSetRN.placeHolderList[61]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:Stalagmite_2:Stalagmite2|DragonGateCaveSet:Stalagmite_2:MiddleRight.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[63]" ""
+		"DragonGateCaveSetRN.placeHolderList[62]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:Stalagmite_2:Stalagmite2|DragonGateCaveSet:Stalagmite_2:TopLeft.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[64]" ""
+		"DragonGateCaveSetRN.placeHolderList[63]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:Stalagmite_2:Stalagmite2|DragonGateCaveSet:Stalagmite_2:MidHighRight.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[65]" ""
+		"DragonGateCaveSetRN.placeHolderList[64]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:Stalagmite_2:Stalagmite2|DragonGateCaveSet:Stalagmite_2:TopRight.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[66]" ""
+		"DragonGateCaveSetRN.placeHolderList[65]" ""
 		"DragonGateCaveSet:Stalagmite_1RN" 5
 		2 "|DragonGateCaveSet:Stalagmite_1:Staligmite1" "translate" " -type \"double3\" 0 -434.47866634019493404 0"
 		
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:Stalagmite_1:Staligmite1|DragonGateCaveSet:Stalagmite_1:Bottom.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[58]" ""
+		"DragonGateCaveSetRN.placeHolderList[57]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:Stalagmite_1:Staligmite1|DragonGateCaveSet:Stalagmite_1:LowMid.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[59]" ""
+		"DragonGateCaveSetRN.placeHolderList[58]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:Stalagmite_1:Staligmite1|DragonGateCaveSet:Stalagmite_1:HighMid.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[60]" ""
+		"DragonGateCaveSetRN.placeHolderList[59]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:Stalagmite_1:Staligmite1|DragonGateCaveSet:Stalagmite_1:Top.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[61]" ""
-		"DragonGateCaveSet:DragonGateRN" 57
+		"DragonGateCaveSetRN.placeHolderList[60]" ""
+		"DragonGateCaveSet:DragonGateRN" 56
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGate:DragonGate|DragonGateCaveSet:DragonGate:Arch|DragonGateCaveSet:DragonGate:ARCH1.drawOverride" 
 		"DragonGateCaveSetRN.placeHolderList[1]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGate:DragonGate|DragonGateCaveSet:DragonGate:Arch|DragonGateCaveSet:DragonGate:ARCH2.drawOverride" 
@@ -695,430 +752,635 @@ createNode reference -n "DragonGateCaveSetRN";
 		"DragonGateCaveSetRN.placeHolderList[55]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGate:DragonGate|DragonGateCaveSet:DragonGate:DragonSkull|DragonGateCaveSet:DragonGate:BottomJaw|DragonGateCaveSet:DragonGate:Lower_Teeth|DragonGateCaveSet:DragonGate:R_Lower_Teeth|DragonGateCaveSet:DragonGate:R_Lower_Teeth_08.drawOverride" 
 		"DragonGateCaveSetRN.placeHolderList[56]" ""
-		5 4 "DragonGateCaveSetRN" "DragonGateCaveSet:DragonGate:standardSurface1SG.dagSetMembers" 
-		"DragonGateCaveSetRN.placeHolderList[57]" ""
-		"DragonGateCaveSet:Emergency_ButtonRN" 3
+		"DragonGateCaveSet:Emergency_ButtonRN" 13
+		2 "DragonGateCaveSet:Emergency_Button:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/EmergencyButton/Emergency_Button_Cover_Mat_BaseColor.1001.png\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file1" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/EmergencyButton/Emergency_Button_ButtonBase_Mat_BaseColor.1001.png\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file2" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/EmergencyButton/Emergency_Button_ButtonBase_Mat_Metallic.1001.png\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file3" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/EmergencyButton/Emergency_Button_Button_Mat_BaseColor.1001.png\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file4" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/EmergencyButton/Emergency_Button_Button_Mat_Metallic.1001.png\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file5" "colorSpace" " -type \"string\" \"sRGB\""
+		
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:box1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[67]" ""
+		"DragonGateCaveSetRN.placeHolderList[66]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:polySurface1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[68]" ""
+		"DragonGateCaveSetRN.placeHolderList[67]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[69]" ""
+		"DragonGateCaveSetRN.placeHolderList[68]" ""
+		"DragonGateCaveSet:Material_RefRN" 80
+		2 "DragonGateCaveSet:Material_Ref:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file1" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file2" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file3" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file4" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file5" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file1" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file3" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file2" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file4" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file6" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file5" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file7" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file6" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file8" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file7" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file1" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file3" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file2" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file4" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file8" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file1" "colorSpace" 
+		" -type \"string\" \"sRGB\""
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file3" "colorSpace" 
+		" -type \"string\" \"sRGB\""
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file2" "colorSpace" 
+		" -type \"string\" \"sRGB\""
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file4" "colorSpace" 
+		" -type \"string\" \"sRGB\""
+		2 "DragonGateCaveSet:Material_Ref:file9" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file9" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file1" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file1" 
+		"colorSpace" " -type \"string\" \"sRGB\""
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file3" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file3" 
+		"colorSpace" " -type \"string\" \"sRGB\""
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file2" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file2" 
+		"colorSpace" " -type \"string\" \"sRGB\""
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file4" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file4" 
+		"colorSpace" " -type \"string\" \"sRGB\""
+		2 "DragonGateCaveSet:Material_Ref:file10" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file11" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file11" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file12" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file13" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file12" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file12" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file13" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file13" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file13" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file14" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Metallic.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file13" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file13" "colorSpace" 
+		" -type \"string\" \"sRGB\""
+		2 "DragonGateCaveSet:Material_Ref:pasted__file14" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Metallic.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file14" "colorSpace" " -type \"string\" \"sRGB\""
+		
 		"DragonGateCaveSet:DragonGateTorchRN" 93
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:WallBase|DragonGateCaveSet:DragonGateTorch:TorchBase.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[70]" ""
+		"DragonGateCaveSetRN.placeHolderList[69]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:WallBase|DragonGateCaveSet:DragonGateTorch:HookFrame01.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[71]" ""
+		"DragonGateCaveSetRN.placeHolderList[70]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:WallBase|DragonGateCaveSet:DragonGateTorch:HookFrame02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[72]" ""
+		"DragonGateCaveSetRN.placeHolderList[71]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:WallBase|DragonGateCaveSet:DragonGateTorch:Hook.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[73]" ""
+		"DragonGateCaveSetRN.placeHolderList[72]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:WallBase|DragonGateCaveSet:DragonGateTorch:BaseSphereDetail01.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[74]" ""
+		"DragonGateCaveSetRN.placeHolderList[73]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:WallBase|DragonGateCaveSet:DragonGateTorch:BaseSphereDetail02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[75]" ""
+		"DragonGateCaveSetRN.placeHolderList[74]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:WallBase|DragonGateCaveSet:DragonGateTorch:TopChain|DragonGateCaveSet:DragonGateTorch:TopLoop.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[76]" ""
+		"DragonGateCaveSetRN.placeHolderList[75]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:WallBase|DragonGateCaveSet:DragonGateTorch:TopChain|DragonGateCaveSet:DragonGateTorch:Chain01.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[77]" ""
+		"DragonGateCaveSetRN.placeHolderList[76]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:WallBase|DragonGateCaveSet:DragonGateTorch:TopChain|DragonGateCaveSet:DragonGateTorch:Chain02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[78]" ""
+		"DragonGateCaveSetRN.placeHolderList[77]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:WallBase|DragonGateCaveSet:DragonGateTorch:TopChain|DragonGateCaveSet:DragonGateTorch:Chain03.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[79]" ""
+		"DragonGateCaveSetRN.placeHolderList[78]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:MiddleLoop01.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[80]" ""
+		"DragonGateCaveSetRN.placeHolderList[79]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:MiddleLoop02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[81]" ""
+		"DragonGateCaveSetRN.placeHolderList[80]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain02|DragonGateCaveSet:DragonGateTorch:Chain04.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[82]" ""
+		"DragonGateCaveSetRN.placeHolderList[81]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain02|DragonGateCaveSet:DragonGateTorch:Chain05.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[83]" ""
+		"DragonGateCaveSetRN.placeHolderList[82]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain02|DragonGateCaveSet:DragonGateTorch:Chain06.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[84]" ""
+		"DragonGateCaveSetRN.placeHolderList[83]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain02|DragonGateCaveSet:DragonGateTorch:Chain07.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[85]" ""
+		"DragonGateCaveSetRN.placeHolderList[84]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain02|DragonGateCaveSet:DragonGateTorch:Chain08.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[86]" ""
+		"DragonGateCaveSetRN.placeHolderList[85]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain02|DragonGateCaveSet:DragonGateTorch:Chain09.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[87]" ""
+		"DragonGateCaveSetRN.placeHolderList[86]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain03|DragonGateCaveSet:DragonGateTorch:Chain04.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[88]" ""
+		"DragonGateCaveSetRN.placeHolderList[87]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain03|DragonGateCaveSet:DragonGateTorch:Chain05.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[89]" ""
+		"DragonGateCaveSetRN.placeHolderList[88]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain03|DragonGateCaveSet:DragonGateTorch:Chain06.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[90]" ""
+		"DragonGateCaveSetRN.placeHolderList[89]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain03|DragonGateCaveSet:DragonGateTorch:Chain07.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[91]" ""
+		"DragonGateCaveSetRN.placeHolderList[90]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain03|DragonGateCaveSet:DragonGateTorch:Chain08.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[92]" ""
+		"DragonGateCaveSetRN.placeHolderList[91]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain03|DragonGateCaveSet:DragonGateTorch:Chain09.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[93]" ""
+		"DragonGateCaveSetRN.placeHolderList[92]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain04|DragonGateCaveSet:DragonGateTorch:Chain04.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[94]" ""
+		"DragonGateCaveSetRN.placeHolderList[93]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain04|DragonGateCaveSet:DragonGateTorch:Chain05.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[95]" ""
+		"DragonGateCaveSetRN.placeHolderList[94]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain04|DragonGateCaveSet:DragonGateTorch:Chain06.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[96]" ""
+		"DragonGateCaveSetRN.placeHolderList[95]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain04|DragonGateCaveSet:DragonGateTorch:Chain07.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[97]" ""
+		"DragonGateCaveSetRN.placeHolderList[96]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain04|DragonGateCaveSet:DragonGateTorch:Chain08.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[98]" ""
+		"DragonGateCaveSetRN.placeHolderList[97]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:MIddleChains|DragonGateCaveSet:DragonGateTorch:Chain04|DragonGateCaveSet:DragonGateTorch:Chain09.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[99]" ""
+		"DragonGateCaveSetRN.placeHolderList[98]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:TorchHolderRing01.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[100]" ""
+		"DragonGateCaveSetRN.placeHolderList[99]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Wood02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[101]" ""
+		"DragonGateCaveSetRN.placeHolderList[100]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Wood03.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[102]" ""
+		"DragonGateCaveSetRN.placeHolderList[101]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Wood04.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[103]" ""
+		"DragonGateCaveSetRN.placeHolderList[102]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Wood05.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[104]" ""
+		"DragonGateCaveSetRN.placeHolderList[103]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Wood06.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[105]" ""
+		"DragonGateCaveSetRN.placeHolderList[104]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Wood07.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[106]" ""
+		"DragonGateCaveSetRN.placeHolderList[105]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Wood08.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[107]" ""
+		"DragonGateCaveSetRN.placeHolderList[106]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Wood09.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[108]" ""
+		"DragonGateCaveSetRN.placeHolderList[107]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Wood10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[109]" ""
+		"DragonGateCaveSetRN.placeHolderList[108]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:TorchBase.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[110]" ""
+		"DragonGateCaveSetRN.placeHolderList[109]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:TorchHolderRing02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[111]" ""
+		"DragonGateCaveSetRN.placeHolderList[110]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[112]" ""
+		"DragonGateCaveSetRN.placeHolderList[111]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[113]" ""
+		"DragonGateCaveSetRN.placeHolderList[112]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[114]" ""
+		"DragonGateCaveSetRN.placeHolderList[113]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[115]" ""
+		"DragonGateCaveSetRN.placeHolderList[114]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[116]" ""
+		"DragonGateCaveSetRN.placeHolderList[115]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[117]" ""
+		"DragonGateCaveSetRN.placeHolderList[116]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[118]" ""
+		"DragonGateCaveSetRN.placeHolderList[117]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[119]" ""
+		"DragonGateCaveSetRN.placeHolderList[118]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[120]" ""
+		"DragonGateCaveSetRN.placeHolderList[119]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[121]" ""
+		"DragonGateCaveSetRN.placeHolderList[120]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[122]" ""
+		"DragonGateCaveSetRN.placeHolderList[121]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[123]" ""
+		"DragonGateCaveSetRN.placeHolderList[122]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail6.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[124]" ""
+		"DragonGateCaveSetRN.placeHolderList[123]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail6.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[125]" ""
+		"DragonGateCaveSetRN.placeHolderList[124]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail7.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[126]" ""
+		"DragonGateCaveSetRN.placeHolderList[125]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail7.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[127]" ""
+		"DragonGateCaveSetRN.placeHolderList[126]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail8.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[128]" ""
+		"DragonGateCaveSetRN.placeHolderList[127]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail8.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[129]" ""
+		"DragonGateCaveSetRN.placeHolderList[128]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail9.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[130]" ""
+		"DragonGateCaveSetRN.placeHolderList[129]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail9.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[131]" ""
+		"DragonGateCaveSetRN.placeHolderList[130]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[132]" ""
+		"DragonGateCaveSetRN.placeHolderList[131]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[133]" ""
+		"DragonGateCaveSetRN.placeHolderList[132]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SquareDetail11.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[134]" ""
+		"DragonGateCaveSetRN.placeHolderList[133]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsTop|DragonGateCaveSet:DragonGateTorch:SphereDetail11.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[135]" ""
+		"DragonGateCaveSetRN.placeHolderList[134]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[136]" ""
+		"DragonGateCaveSetRN.placeHolderList[135]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[137]" ""
+		"DragonGateCaveSetRN.placeHolderList[136]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[138]" ""
+		"DragonGateCaveSetRN.placeHolderList[137]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[139]" ""
+		"DragonGateCaveSetRN.placeHolderList[138]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[140]" ""
+		"DragonGateCaveSetRN.placeHolderList[139]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[141]" ""
+		"DragonGateCaveSetRN.placeHolderList[140]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail6.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[142]" ""
+		"DragonGateCaveSetRN.placeHolderList[141]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail7.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[143]" ""
+		"DragonGateCaveSetRN.placeHolderList[142]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail8.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[144]" ""
+		"DragonGateCaveSetRN.placeHolderList[143]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail9.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[145]" ""
+		"DragonGateCaveSetRN.placeHolderList[144]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[146]" ""
+		"DragonGateCaveSetRN.placeHolderList[145]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SquareDetail11.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[147]" ""
+		"DragonGateCaveSetRN.placeHolderList[146]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail11.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[148]" ""
+		"DragonGateCaveSetRN.placeHolderList[147]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[149]" ""
+		"DragonGateCaveSetRN.placeHolderList[148]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail9.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[150]" ""
+		"DragonGateCaveSetRN.placeHolderList[149]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail8.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[151]" ""
+		"DragonGateCaveSetRN.placeHolderList[150]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail7.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[152]" ""
+		"DragonGateCaveSetRN.placeHolderList[151]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail6.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[153]" ""
+		"DragonGateCaveSetRN.placeHolderList[152]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[154]" ""
+		"DragonGateCaveSetRN.placeHolderList[153]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[155]" ""
+		"DragonGateCaveSetRN.placeHolderList[154]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[156]" ""
+		"DragonGateCaveSetRN.placeHolderList[155]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[157]" ""
+		"DragonGateCaveSetRN.placeHolderList[156]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[158]" ""
+		"DragonGateCaveSetRN.placeHolderList[157]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:HolderDetailsBottom|DragonGateCaveSet:DragonGateTorch:SphereDetail.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[159]" ""
+		"DragonGateCaveSetRN.placeHolderList[158]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Loop04.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[160]" ""
+		"DragonGateCaveSetRN.placeHolderList[159]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Loop05.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[161]" ""
+		"DragonGateCaveSetRN.placeHolderList[160]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch|DragonGateCaveSet:DragonGateTorch:TorchHolder|DragonGateCaveSet:DragonGateTorch:Loop06.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[162]" ""
+		"DragonGateCaveSetRN.placeHolderList[161]" ""
 		"DragonGateCaveSet:Large_BoulderRN" 2
 		2 "|DragonGateCaveSet:Large_Boulder:LargeBoulder" "translate" " -type \"double3\" 0 -434.47866634019493404 0"
 		
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:Large_Boulder:LargeBoulder.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[163]" ""
-		"DragonGateCaveSetRN" 111
+		"DragonGateCaveSetRN.placeHolderList[162]" ""
+		"DragonGateCaveSetRN" 116
+		2 "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_07" "translate" 
+		" -type \"double3\" 455.56190178272009916 -573.90294464896078352 -589.05194234066323133"
+		
+		2 "DragonGateCaveSet:Stalagmite_3:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Stalagmite2Files-20260324T022654Z-3-001/Stalagmite2Files/Stalagmite2Export_standardSurface1_BaseColor.png\""
+		
+		2 "DragonGateCaveSet:Stalagmite_3:file1" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "DragonGateCaveSet:Stalagmite_3:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Stalagmite2Files-20260324T022654Z-3-001/Stalagmite2Files/Stalagmite2Export_standardSurface1_Roughness.png\""
+		
+		2 "DragonGateCaveSet:Stalagmite_3:file2" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:CaveWall_03|DragonGateCaveSet:Walls_03.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[187]" ""
+		"DragonGateCaveSetRN.placeHolderList[186]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:CaveWall_03|DragonGateCaveSet:Ground03.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[188]" ""
+		"DragonGateCaveSetRN.placeHolderList[187]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_02|DragonGateCaveSet:pCube1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[189]" ""
+		"DragonGateCaveSetRN.placeHolderList[188]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_02|DragonGateCaveSet:pCube2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[190]" ""
+		"DragonGateCaveSetRN.placeHolderList[189]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_02|DragonGateCaveSet:pCube3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[191]" ""
+		"DragonGateCaveSetRN.placeHolderList[190]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_02|DragonGateCaveSet:pCube4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[192]" ""
+		"DragonGateCaveSetRN.placeHolderList[191]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:WallBase|DragonGateCaveSet:TorchBase.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[193]" ""
+		"DragonGateCaveSetRN.placeHolderList[192]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:WallBase|DragonGateCaveSet:HookFrame01.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[194]" ""
+		"DragonGateCaveSetRN.placeHolderList[193]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:WallBase|DragonGateCaveSet:HookFrame02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[195]" ""
+		"DragonGateCaveSetRN.placeHolderList[194]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:WallBase|DragonGateCaveSet:Hook.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[196]" ""
+		"DragonGateCaveSetRN.placeHolderList[195]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:WallBase|DragonGateCaveSet:BaseSphereDetail01.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[197]" ""
+		"DragonGateCaveSetRN.placeHolderList[196]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:WallBase|DragonGateCaveSet:BaseSphereDetail02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[198]" ""
+		"DragonGateCaveSetRN.placeHolderList[197]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:WallBase|DragonGateCaveSet:TopChain|DragonGateCaveSet:TopLoop.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[199]" ""
+		"DragonGateCaveSetRN.placeHolderList[198]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:WallBase|DragonGateCaveSet:TopChain|DragonGateCaveSet:Chain01.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[200]" ""
+		"DragonGateCaveSetRN.placeHolderList[199]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:WallBase|DragonGateCaveSet:TopChain|DragonGateCaveSet:Chain02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[201]" ""
+		"DragonGateCaveSetRN.placeHolderList[200]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:WallBase|DragonGateCaveSet:TopChain|DragonGateCaveSet:Chain03.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[202]" ""
+		"DragonGateCaveSetRN.placeHolderList[201]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:MiddleLoop01.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[203]" ""
+		"DragonGateCaveSetRN.placeHolderList[202]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:MiddleLoop02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[204]" ""
+		"DragonGateCaveSetRN.placeHolderList[203]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain02|DragonGateCaveSet:Chain04.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[205]" ""
+		"DragonGateCaveSetRN.placeHolderList[204]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain02|DragonGateCaveSet:Chain05.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[206]" ""
+		"DragonGateCaveSetRN.placeHolderList[205]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain02|DragonGateCaveSet:Chain06.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[207]" ""
+		"DragonGateCaveSetRN.placeHolderList[206]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain02|DragonGateCaveSet:Chain07.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[208]" ""
+		"DragonGateCaveSetRN.placeHolderList[207]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain02|DragonGateCaveSet:Chain08.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[209]" ""
+		"DragonGateCaveSetRN.placeHolderList[208]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain02|DragonGateCaveSet:Chain09.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[210]" ""
+		"DragonGateCaveSetRN.placeHolderList[209]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain03|DragonGateCaveSet:Chain04.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[211]" ""
+		"DragonGateCaveSetRN.placeHolderList[210]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain03|DragonGateCaveSet:Chain05.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[212]" ""
+		"DragonGateCaveSetRN.placeHolderList[211]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain03|DragonGateCaveSet:Chain06.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[213]" ""
+		"DragonGateCaveSetRN.placeHolderList[212]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain03|DragonGateCaveSet:Chain07.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[214]" ""
+		"DragonGateCaveSetRN.placeHolderList[213]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain03|DragonGateCaveSet:Chain08.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[215]" ""
+		"DragonGateCaveSetRN.placeHolderList[214]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain03|DragonGateCaveSet:Chain09.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[216]" ""
+		"DragonGateCaveSetRN.placeHolderList[215]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain04|DragonGateCaveSet:Chain04.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[217]" ""
+		"DragonGateCaveSetRN.placeHolderList[216]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain04|DragonGateCaveSet:Chain05.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[218]" ""
+		"DragonGateCaveSetRN.placeHolderList[217]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain04|DragonGateCaveSet:Chain06.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[219]" ""
+		"DragonGateCaveSetRN.placeHolderList[218]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain04|DragonGateCaveSet:Chain07.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[220]" ""
+		"DragonGateCaveSetRN.placeHolderList[219]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain04|DragonGateCaveSet:Chain08.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[221]" ""
+		"DragonGateCaveSetRN.placeHolderList[220]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:MIddleChains|DragonGateCaveSet:Chain04|DragonGateCaveSet:Chain09.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[222]" ""
+		"DragonGateCaveSetRN.placeHolderList[221]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:TorchHolderRing01.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[223]" ""
+		"DragonGateCaveSetRN.placeHolderList[222]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Wood02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[224]" ""
+		"DragonGateCaveSetRN.placeHolderList[223]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Wood03.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[225]" ""
+		"DragonGateCaveSetRN.placeHolderList[224]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Wood04.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[226]" ""
+		"DragonGateCaveSetRN.placeHolderList[225]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Wood05.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[227]" ""
+		"DragonGateCaveSetRN.placeHolderList[226]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Wood06.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[228]" ""
+		"DragonGateCaveSetRN.placeHolderList[227]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Wood07.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[229]" ""
+		"DragonGateCaveSetRN.placeHolderList[228]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Wood08.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[230]" ""
+		"DragonGateCaveSetRN.placeHolderList[229]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Wood09.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[231]" ""
+		"DragonGateCaveSetRN.placeHolderList[230]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Wood10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[232]" ""
+		"DragonGateCaveSetRN.placeHolderList[231]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:TorchBase.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[233]" ""
+		"DragonGateCaveSetRN.placeHolderList[232]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:TorchHolderRing02.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[234]" ""
+		"DragonGateCaveSetRN.placeHolderList[233]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[235]" ""
+		"DragonGateCaveSetRN.placeHolderList[234]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[236]" ""
+		"DragonGateCaveSetRN.placeHolderList[235]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[237]" ""
+		"DragonGateCaveSetRN.placeHolderList[236]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[238]" ""
+		"DragonGateCaveSetRN.placeHolderList[237]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[239]" ""
+		"DragonGateCaveSetRN.placeHolderList[238]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[240]" ""
+		"DragonGateCaveSetRN.placeHolderList[239]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[241]" ""
+		"DragonGateCaveSetRN.placeHolderList[240]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[242]" ""
+		"DragonGateCaveSetRN.placeHolderList[241]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[243]" ""
+		"DragonGateCaveSetRN.placeHolderList[242]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[244]" ""
+		"DragonGateCaveSetRN.placeHolderList[243]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[245]" ""
+		"DragonGateCaveSetRN.placeHolderList[244]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[246]" ""
+		"DragonGateCaveSetRN.placeHolderList[245]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail6.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[247]" ""
+		"DragonGateCaveSetRN.placeHolderList[246]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail6.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[248]" ""
+		"DragonGateCaveSetRN.placeHolderList[247]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail7.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[249]" ""
+		"DragonGateCaveSetRN.placeHolderList[248]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail7.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[250]" ""
+		"DragonGateCaveSetRN.placeHolderList[249]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail8.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[251]" ""
+		"DragonGateCaveSetRN.placeHolderList[250]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail8.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[252]" ""
+		"DragonGateCaveSetRN.placeHolderList[251]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail9.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[253]" ""
+		"DragonGateCaveSetRN.placeHolderList[252]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail9.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[254]" ""
+		"DragonGateCaveSetRN.placeHolderList[253]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[255]" ""
+		"DragonGateCaveSetRN.placeHolderList[254]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[256]" ""
+		"DragonGateCaveSetRN.placeHolderList[255]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SquareDetail11.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[257]" ""
+		"DragonGateCaveSetRN.placeHolderList[256]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsTop|DragonGateCaveSet:SphereDetail11.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[258]" ""
+		"DragonGateCaveSetRN.placeHolderList[257]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[259]" ""
+		"DragonGateCaveSetRN.placeHolderList[258]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[260]" ""
+		"DragonGateCaveSetRN.placeHolderList[259]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[261]" ""
+		"DragonGateCaveSetRN.placeHolderList[260]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[262]" ""
+		"DragonGateCaveSetRN.placeHolderList[261]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[263]" ""
+		"DragonGateCaveSetRN.placeHolderList[262]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[264]" ""
+		"DragonGateCaveSetRN.placeHolderList[263]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail6.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[265]" ""
+		"DragonGateCaveSetRN.placeHolderList[264]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail7.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[266]" ""
+		"DragonGateCaveSetRN.placeHolderList[265]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail8.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[267]" ""
+		"DragonGateCaveSetRN.placeHolderList[266]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail9.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[268]" ""
+		"DragonGateCaveSetRN.placeHolderList[267]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[269]" ""
+		"DragonGateCaveSetRN.placeHolderList[268]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SquareDetail11.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[270]" ""
+		"DragonGateCaveSetRN.placeHolderList[269]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail11.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[271]" ""
+		"DragonGateCaveSetRN.placeHolderList[270]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail10.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[272]" ""
+		"DragonGateCaveSetRN.placeHolderList[271]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail9.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[273]" ""
+		"DragonGateCaveSetRN.placeHolderList[272]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail8.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[274]" ""
+		"DragonGateCaveSetRN.placeHolderList[273]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail7.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[275]" ""
+		"DragonGateCaveSetRN.placeHolderList[274]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail6.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[276]" ""
+		"DragonGateCaveSetRN.placeHolderList[275]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[277]" ""
+		"DragonGateCaveSetRN.placeHolderList[276]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[278]" ""
+		"DragonGateCaveSetRN.placeHolderList[277]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[279]" ""
+		"DragonGateCaveSetRN.placeHolderList[278]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[280]" ""
+		"DragonGateCaveSetRN.placeHolderList[279]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[281]" ""
+		"DragonGateCaveSetRN.placeHolderList[280]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:HolderDetailsBottom|DragonGateCaveSet:SphereDetail.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[282]" ""
+		"DragonGateCaveSetRN.placeHolderList[281]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Loop04.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[283]" ""
+		"DragonGateCaveSetRN.placeHolderList[282]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Loop05.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[284]" ""
+		"DragonGateCaveSetRN.placeHolderList[283]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch1|DragonGateCaveSet:TorchHolder|DragonGateCaveSet:Loop06.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[285]" ""
+		"DragonGateCaveSetRN.placeHolderList[284]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_02_03|DragonGateCaveSet:pCube5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[286]" ""
+		"DragonGateCaveSetRN.placeHolderList[285]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_02_04|DragonGateCaveSet:pCube4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[287]" ""
+		"DragonGateCaveSetRN.placeHolderList[286]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_02_04|DragonGateCaveSet:pCube5.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[288]" ""
+		"DragonGateCaveSetRN.placeHolderList[287]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_04|DragonGateCaveSet:pCube4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[289]" ""
+		"DragonGateCaveSetRN.placeHolderList[288]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_06|DragonGateCaveSet:pCube1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[290]" ""
+		"DragonGateCaveSetRN.placeHolderList[289]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_06|DragonGateCaveSet:pCube2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[291]" ""
+		"DragonGateCaveSetRN.placeHolderList[290]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_06|DragonGateCaveSet:pCube3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[292]" ""
+		"DragonGateCaveSetRN.placeHolderList[291]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_06|DragonGateCaveSet:pCube4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[293]" ""
+		"DragonGateCaveSetRN.placeHolderList[292]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_07|DragonGateCaveSet:pCube1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[294]" ""
+		"DragonGateCaveSetRN.placeHolderList[293]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_07|DragonGateCaveSet:pCube2.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[295]" ""
+		"DragonGateCaveSetRN.placeHolderList[294]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_07|DragonGateCaveSet:pCube3.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[296]" ""
+		"DragonGateCaveSetRN.placeHolderList[295]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_07|DragonGateCaveSet:pCube4.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[297]" "";
+		"DragonGateCaveSetRN.placeHolderList[296]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode ikSpringSolver -s -n "ikSpringSolver";
@@ -1326,25 +1588,25 @@ createNode reference -n "SkeletonRN";
 		"translate" " -type \"double3\" -1294.55647395965479518 -406.2868894942780571 896.73634884173861792"
 		
 		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl" 
-		"rotate" " -type \"double3\" 81.88870450124383638 -92.08074611046745872 0"
+		"rotate" " -type \"double3\" 81.88870450124383638 -92.08074611046747293 0"
 		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl|Skeleton:COG_Ctrl_Grp|Skeleton:COG_Ctrl|Skeleton:Spine_And_Head|Skeleton:Head_Controls|Skeleton:Face_Controls|Skeleton:L_Socket_Lower_Ctrl_Grp|Skeleton:L_Socket_Lower_Ctrl_Offset_Grp|Skeleton:L_Socket_Lower_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl|Skeleton:COG_Ctrl_Grp|Skeleton:COG_Ctrl|Skeleton:Spine_And_Head|Skeleton:Head_Controls|Skeleton:Face_Controls|Skeleton:Mouth_Ctrl_Grp|Skeleton:Mouth_Ctrl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "Skeleton:Jnt_Layer" "visibility" " 0"
 		2 "Skeleton:Ctrl_Layer" "visibility" " 0"
-		2 "Skeleton:file1" "fileTextureName" " -type \"string\" \"C:/Users/joshr/OneDrive/Desktop/WorkDay/Textures/Skeleton/SkellyTemp_Toes_lambert1_BaseColor.1001.png\""
+		2 "Skeleton:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_BaseColor.1001.png\""
 		
 		2 "Skeleton:file1" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "Skeleton:file1" "viewNameUsed" " 0"
 		2 "Skeleton:file1" "viewNameStr" " -type \"string\" \"<N/A>\""
 		2 "Skeleton:file2" "alphaIsLuminance" " 0"
-		2 "Skeleton:file2" "fileTextureName" " -type \"string\" \"C:/Users/joshr/OneDrive/Desktop/WorkDay/Textures/Skeleton/SkellyTemp_Toes_lambert1_Normal.1001.png\""
+		2 "Skeleton:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_Normal.1001.png\""
 		
 		2 "Skeleton:file2" "colorSpace" " -type \"string\" \"Raw\""
 		2 "Skeleton:file2" "viewNameUsed" " 0"
 		2 "Skeleton:file2" "viewNameStr" " -type \"string\" \"<N/A>\""
-		2 "Skeleton:file3" "fileTextureName" " -type \"string\" \"C:/Users/joshr/OneDrive/Desktop/WorkDay/Textures/Skeleton/SkellyTemp_Toes_lambert1_Roughness.1001.png\""
+		2 "Skeleton:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_Roughness.1001.png\""
 		
 		2 "Skeleton:file3" "colorSpace" " -type \"string\" \"Raw\""
 		2 "Skeleton:file3" "viewNameUsed" " 0"
@@ -1855,8 +2117,8 @@ createNode animCurveTA -n "Chest_Ctrl_rotateX";
 	rename -uid "2F9A8F09-4377-9013-A211-079C415582A4";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 2.7155218806596513 61 2.7155218806596513
-		 68 2.7155037652174578 74 2.7155218806596513;
+	setAttr -s 4 ".ktv[0:3]"  0 2.7155218806596513 30.5 2.7155218806596513
+		 34 2.7155037652174578 37 2.7155218806596513;
 	setAttr -s 4 ".kit[0:3]"  18 18 18 1;
 	setAttr -s 4 ".kix[3]"  1;
 	setAttr -s 4 ".kiy[3]"  0;
@@ -1864,8 +2126,8 @@ createNode animCurveTA -n "Chest_Ctrl_rotateY";
 	rename -uid "51E6342F-4105-D500-664B-CAA586D01037";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -4.9696166897867437e-17 61 -4.9696166897867437e-17
-		 68 -0.0099226590720918242 74 -4.9696166897867437e-17;
+	setAttr -s 4 ".ktv[0:3]"  0 -4.9696166897867437e-17 30.5 -4.9696166897867437e-17
+		 34 -0.0099226590720918242 37 -4.9696166897867437e-17;
 	setAttr -s 4 ".kit[0:3]"  18 18 18 1;
 	setAttr -s 4 ".kix[3]"  1;
 	setAttr -s 4 ".kiy[3]"  0;
@@ -1873,8 +2135,8 @@ createNode animCurveTA -n "Chest_Ctrl_rotateZ";
 	rename -uid "2833391C-492A-EEAC-416B-B7AEED990226";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -13.112351624092558 61 -13.112351624092558
-		 68 -12.903146164442095 74 -13.112351624092558;
+	setAttr -s 4 ".ktv[0:3]"  0 -13.112351624092558 30.5 -13.112351624092558
+		 34 -12.903146164442095 37 -13.112351624092558;
 	setAttr -s 4 ".kit[0:3]"  18 18 18 1;
 	setAttr -s 4 ".kix[3]"  1;
 	setAttr -s 4 ".kiy[3]"  0;
@@ -1900,28 +2162,28 @@ createNode animCurveTA -n "R_Arm_01_FK_Ctrl_rotateX";
 	rename -uid "4E842AA6-4906-B08A-B2DD-4D852986EDD2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -5.403142600439435e-15 61 18.420739231710215;
+	setAttr -s 2 ".ktv[0:1]"  0 -5.403142600439435e-15 30.5 18.420739231710215;
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTA -n "R_Arm_01_FK_Ctrl_rotateY";
 	rename -uid "B2E73164-4645-8368-F1ED-689C0326AE10";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -27.996831512380435 61 -40.101764742185466;
+	setAttr -s 2 ".ktv[0:1]"  0 -27.996831512380435 30.5 -40.101764742185466;
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTA -n "R_Arm_01_FK_Ctrl_rotateZ";
 	rename -uid "4CD2ED54-4493-2DC7-B196-36B38BDD4768";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 72.450249213364529 61 28.849001576226879;
+	setAttr -s 2 ".ktv[0:1]"  0 72.450249213364529 30.5 28.849001576226879;
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTA -n "R_Arm_02_FK_Ctrl_rotateX";
 	rename -uid "F7285D38-40CE-EB33-408C-53985524779E";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 -27.313148019563233 6 -26.629568594706523
-		 8 -29.184733982793876 10 -25.151738228440895 12 -21.856414698358709 14 -19.824555502414881
-		 16 -15.822905439930564 18 -11.967166024527472 20 -9.6155292119748204 61 11.651940390269333
-		 68 11.89267484716793 74 11.651940390269333;
+	setAttr -s 12 ".ktv[0:11]"  0 -27.313148019563233 3 -26.629568594706523
+		 4 -29.184733982793876 5 -25.151738228440895 6 -21.856414698358709 7 -19.824555502414881
+		 8 -15.822905439930564 9 -11.967166024527474 10 -9.6155292119748204 30.5 11.651940390269333
+		 34 11.89267484716793 37 11.651940390269333;
 	setAttr -s 12 ".kit[0:11]"  1 18 1 18 18 1 18 1 
 		1 18 18 1;
 	setAttr -s 12 ".kix[0:11]"  1 1 1 0.79331777830878791 0.87330109877887596 
@@ -1932,10 +2194,10 @@ createNode animCurveTA -n "R_Arm_02_FK_Ctrl_rotateY";
 	rename -uid "E85FEB7C-4BEF-CAA2-8FF8-3697E57F5F1A";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 58.151239832206521 6 57.302960701727123
-		 8 52.22720987542472 10 52.741040812711979 12 53.002898560791564 14 55.356977057722595
-		 16 56.231883112406535 18 56.862323517561236 20 57.153360937340267 61 42.630747886517064
-		 68 42.576194293782571 74 42.630747886517064;
+	setAttr -s 12 ".ktv[0:11]"  0 58.151239832206521 3 57.302960701727123
+		 4 52.22720987542472 5 52.741040812711979 6 53.002898560791564 7 55.356977057722602
+		 8 56.231883112406535 9 56.862323517561236 10 57.153360937340267 30.5 42.630747886517064
+		 34 42.576194293782578 37 42.630747886517064;
 	setAttr -s 12 ".kit[0:11]"  1 18 1 18 18 1 18 1 
 		1 18 18 1;
 	setAttr -s 12 ".kix[0:11]"  0.86989688509864926 0.98458194843843705 
@@ -1948,10 +2210,10 @@ createNode animCurveTA -n "R_Arm_02_FK_Ctrl_rotateZ";
 	rename -uid "ADB8F50D-49CD-570B-3A11-62A804748A85";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 66.152027591524075 6 66.96047910513289
-		 8 64.066298297019983 10 69.141315205025236 12 73.254274995343508 14 75.648702577740721
-		 16 80.486256400038428 18 85.106734309920782 20 87.910315634172164 61 112.8074824980108
-		 68 113.16311360773983 74 112.8074824980108;
+	setAttr -s 12 ".ktv[0:11]"  0 66.152027591524075 3 66.960479105132904
+		 4 64.066298297019983 5 69.141315205025236 6 73.254274995343508 7 75.648702577740721
+		 8 80.486256400038428 9 85.106734309920782 10 87.910315634172164 30.5 112.8074824980108
+		 34 113.16311360773983 37 112.8074824980108;
 	setAttr -s 12 ".kit[0:11]"  1 18 1 18 18 1 18 1 
 		1 18 18 1;
 	setAttr -s 12 ".kix[0:11]"  1 1 1 0.72060829502272961 0.82636815622097792 
@@ -1962,10 +2224,10 @@ createNode animCurveTA -n "R_Arm_03_FK_Ctrl_rotateX";
 	rename -uid "C626379B-44A0-6F77-FC8B-9386BF8E92FF";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 44.540105120811475 4 46.666600785417288
-		 6 37.878732814772569 8 29.567044247972234 10 32.162978028107879 12 36.065385766330088
-		 14 42.453869394928873 18 38.851595532101186 20 38.851595532101186 22 38.632497149708108
-		 24 38.761681406660053 61 16.787143991387584;
+	setAttr -s 12 ".ktv[0:11]"  0 44.540105120811475 2 46.666600785417288
+		 3 37.878732814772569 4 29.567044247972234 5 32.162978028107879 6 36.065385766330088
+		 7 42.453869394928873 9 38.851595532101186 10 38.851595532101186 11 38.632497149708108
+		 12 38.761681406660053 30.5 16.787143991387584;
 	setAttr -s 12 ".kit[0:11]"  1 18 18 1 18 18 1 1 
 		1 18 18 18;
 	setAttr -s 12 ".kix[0:11]"  0.38397429861795634 1 0.48757473944231583 
@@ -1976,10 +2238,10 @@ createNode animCurveTA -n "R_Arm_03_FK_Ctrl_rotateY";
 	rename -uid "2E2001A6-4CE2-0F3C-2353-5EA528586073";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 -32.924861376919594 4 -29.329305735041931
-		 6 -33.115120834604092 8 -25.159398360083461 10 -25.159398360083479 12 -26.842652082191879
-		 14 -30.085669108371579 18 -34.937659371890163 20 -34.937659371890163 22 -35.188134948303151
-		 24 -35.040969701740678 61 -37.128634429196723;
+	setAttr -s 12 ".ktv[0:11]"  0 -32.924861376919594 2 -29.329305735041931
+		 3 -33.115120834604092 4 -25.159398360083461 5 -25.159398360083479 6 -26.842652082191879
+		 7 -30.085669108371579 9 -34.937659371890163 10 -34.937659371890163 11 -35.188134948303151
+		 12 -35.040969701740678 30.5 -37.128634429196723;
 	setAttr -s 12 ".kit[0:11]"  1 18 18 1 18 18 1 1 
 		1 18 18 18;
 	setAttr -s 12 ".kix[0:11]"  1 1 1 1 1 0.88871161257748188 1 1 1 1 1 
@@ -1990,10 +2252,10 @@ createNode animCurveTA -n "R_Arm_03_FK_Ctrl_rotateZ";
 	rename -uid "263D4EE8-4FD9-4579-733B-F2A4DE34EA8B";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 -27.88338582793034 4 -31.993706870126772
-		 6 -27.65229678723928 8 -12.393136612897907 10 -12.393136612897921 12 -9.8735315424624357
-		 14 -10.63564622772844 18 -3.9447977840160227 20 -3.9447977840160227 22 -3.5634109646749299
-		 24 -3.7879956533787387 61 11.34398199191644;
+	setAttr -s 12 ".ktv[0:11]"  0 -27.88338582793034 2 -31.993706870126772
+		 3 -27.65229678723928 4 -12.393136612897907 5 -12.393136612897921 6 -9.8735315424624375
+		 7 -10.63564622772844 9 -3.9447977840160227 10 -3.9447977840160227 11 -3.5634109646749299
+		 12 -3.7879956533787387 30.5 11.34398199191644;
 	setAttr -s 12 ".kit[0:11]"  1 18 18 1 18 18 1 1 
 		1 18 18 18;
 	setAttr -s 12 ".kix[0:11]"  1 1 0.43798057385460909 0.88864885818731565 
@@ -2004,52 +2266,85 @@ createNode script -n "uiConfigurationScriptNode";
 	rename -uid "25E84046-4CE7-F4E5-4ACB-D79A6C07653F";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1170\n            -height 695\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n"
-		+ "            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|Render_Cam_2\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
+		+ "            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1074\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
+		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
+		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 98\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n"
+		+ "            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n"
+		+ "            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n"
+		+ "            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 98\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n"
+		+ "            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1074\n            -height 706\n            -sceneRenderFilter 0\n"
+		+ "            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
+		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n"
+		+ "            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n"
+		+ "            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
+		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n"
+		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n"
+		+ "                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 0.5\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n"
+		+ "                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n"
+		+ "                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n"
+		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n"
+		+ "                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n"
+		+ "            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n"
+		+ "                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n"
+		+ "\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n"
+		+ "                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n"
+		+ "                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n"
+		+ "                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererOverrideName \"stereoOverrideVP2\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
+		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n"
+		+ "                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel5\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel5\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n"
+		+ "            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
+		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel6\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel6\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n"
+		+ "            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n"
+		+ "            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel7\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel7\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n"
+		+ "            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n"
+		+ "            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
+		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel8\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel8\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel9\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel9\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n"
+		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n"
-		+ "            -width 1170\n            -height 695\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam_2\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
-		+ "            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n"
-		+ "            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n"
-		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2350\n            -height 1480\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
-		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
-		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
-		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1170\n            -height 695\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n"
-		+ "            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n"
-		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n"
-		+ "            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n"
-		+ "            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n"
-		+ "                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n"
-		+ "                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n"
-		+ "                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n"
-		+ "                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n"
-		+ "            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n"
-		+ "                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
-		+ "                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n"
-		+ "                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|:persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
-		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
-		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
-		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Front View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|Render_Cam_2\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2350\\n    -height 1480\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Front View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|Render_Cam_2\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2350\\n    -height 1480\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel10\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel10\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
+		+ "            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n"
+		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n"
+		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel11\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel11\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
+		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n"
+		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel12\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel12\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n"
+		+ "            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel13\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel13\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n"
+		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n"
+		+ "            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel14\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel14\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n"
+		+ "            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n"
+		+ "            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n"
+		+ "            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -editorChanged \\\"updateModelPanelBar\\\" \\n    -camera \\\"|Render_Cam_2\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1074\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -editorChanged \\\"updateModelPanelBar\\\" \\n    -camera \\\"|Render_Cam_2\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1074\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "AAD3B3F3-4291-0FE8-842E-A7A03A1AF001";
-	setAttr ".b" -type "string" "playbackOptions -min 61 -max 120 -ast 0 -aet 120 ";
+	setAttr ".b" -type "string" "playbackOptions -min 31 -max 60 -ast 0 -aet 60 ";
 	setAttr ".st" 6;
 createNode animCurveTA -n "L_Scap_Ctrl_rotateX";
 	rename -uid "A9383BF9-4CA9-A47D-4E6C-04AC10D317AF";
@@ -2211,7 +2506,7 @@ createNode animCurveTA -n "L_MetCarp_03_Ctrl_rotateZ";
 	rename -uid "0316A06B-4D42-250C-8928-B8BE612ABC4B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -5.7341293082180798;
+	setAttr ".ktv[0]"  0 -5.7341293082180806;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "L_Finger_03_Knuckle_01_Ctrl_rotateX";
 	rename -uid "F8188BC2-4CA1-350F-B206-BEAA9C4513AD";
@@ -2532,266 +2827,266 @@ createNode animCurveTU -n "Photograph_white_box_geo_parentConstraint1_R_Arm_03_F
 	rename -uid "BB3CF481-4D19-214C-9BE5-BDB00EBCB885";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  12 1;
+	setAttr ".ktv[0]"  6 1;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_02_Knuckle_02_Ctrl_rotateZ";
 	rename -uid "6E91402A-4F4D-8256-F06B-F7A10D9F39DC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 -15.63284730807087;
+	setAttr ".ktv[0]"  4 -15.63284730807087;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_02_Knuckle_02_Ctrl_rotateX";
 	rename -uid "3DCA82A5-48E9-B030-EB69-82939A3889BD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_02_Knuckle_02_Ctrl_rotateY";
 	rename -uid "593B1346-4480-5FF9-B692-57B74540A9A9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_02_Knuckle_03_Ctrl_rotateZ";
 	rename -uid "4A8FAEF6-45E7-C19C-119A-EAB695EDADBB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 -11.454992549177584;
+	setAttr ".ktv[0]"  4 -11.454992549177584;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_02_Knuckle_03_Ctrl_rotateX";
 	rename -uid "6FCE9E89-4576-B0E0-2044-3EB0155B2840";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_02_Knuckle_03_Ctrl_rotateY";
 	rename -uid "AEAAFCE9-4A90-A277-913D-9F9577032806";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_02_Ctrl_rotateZ";
 	rename -uid "A6BCFCAA-4E9A-5A7E-E017-9C8287AA54BC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 7.7360222209433269;
+	setAttr ".ktv[0]"  4 7.7360222209433269;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_02_Ctrl_rotateX";
 	rename -uid "86CE06BF-4DEE-8396-E4D0-68B2002965ED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_02_Ctrl_rotateY";
 	rename -uid "91A6D637-43B9-A34A-1648-A5B12459F578";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_05_Ctrl_rotateY";
 	rename -uid "D19AE852-4AF1-4473-B5BF-2A86859252D3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 5.2148839996881007;
+	setAttr ".ktv[0]"  4 5.2148839996881007;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_05_Ctrl_rotateX";
 	rename -uid "964F5765-4BA8-AAAD-9624-84ABEDDD5EDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 1.0994156736673886;
+	setAttr ".ktv[0]"  4 1.0994156736673886;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_05_Ctrl_rotateZ";
 	rename -uid "F6A48D12-4CDC-AE67-7EFB-3DA9CC5FD4FB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 11.92231906451803;
+	setAttr ".ktv[0]"  4 11.92231906451803;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_01_Knuckle_02_Ctrl_rotateZ";
 	rename -uid "05548A9F-4FCD-DC37-AC95-DE95AD492C9B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  8 -23.972894945212708 61 -41.818467820286259;
+	setAttr -s 2 ".ktv[0:1]"  4 -23.972894945212708 30.5 -41.818467820286259;
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTA -n "R_Finger_01_Knuckle_02_Ctrl_rotateX";
 	rename -uid "2E13B17B-4E25-6C5E-015A-BB86356DE797";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  8 0 61 0;
+	setAttr -s 2 ".ktv[0:1]"  4 0 30.5 0;
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTA -n "R_Finger_01_Knuckle_02_Ctrl_rotateY";
 	rename -uid "7EA37B03-4676-D357-3691-08935C9E55A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  8 0 61 0;
+	setAttr -s 2 ".ktv[0:1]"  4 0 30.5 0;
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTA -n "R_Finger_05_Knuckle_01_Ctrl_rotateZ";
 	rename -uid "487B0F39-4707-2DF5-F70E-84AE20142B85";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 -23.292896889308913;
+	setAttr ".ktv[0]"  4 -23.292896889308913;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_05_Knuckle_01_Ctrl_rotateX";
 	rename -uid "4E495AD0-406E-0BED-5EB7-D8A3A0146DFB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_05_Knuckle_01_Ctrl_rotateY";
 	rename -uid "426A8289-4D8D-2E9F-2FC9-598BD9D9B70F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_03_Knuckle_03_Ctrl_rotateZ";
 	rename -uid "E8C65F85-4706-45C6-E74B-9DAC743CA156";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 -16.761762977750891;
+	setAttr ".ktv[0]"  4 -16.761762977750891;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_03_Knuckle_03_Ctrl_rotateX";
 	rename -uid "1299B6AC-4D82-5152-A474-54A78719AFD4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_03_Knuckle_03_Ctrl_rotateY";
 	rename -uid "DB40C645-4586-7311-14DA-AFB1DBF84184";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_01_Knuckle_01_Ctrl_rotateZ";
 	rename -uid "DD02924B-4AE6-E425-C20E-3E8CDC7A0D26";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 14.838075649729737;
+	setAttr ".ktv[0]"  4 14.838075649729737;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_01_Knuckle_01_Ctrl_rotateX";
 	rename -uid "5F33F6F1-4B50-E957-7FF1-61BFB5A34E81";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_01_Knuckle_01_Ctrl_rotateY";
 	rename -uid "C842B2A3-479A-E070-90F9-B9BD119D7D0B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_04_Ctrl_rotateY";
 	rename -uid "5297B512-42E5-DA08-942F-9F8C1CFE21A0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 1.9752442034278463;
+	setAttr ".ktv[0]"  4 1.9752442034278463;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_04_Ctrl_rotateX";
 	rename -uid "8F18149D-436E-9CC2-1956-CAAB3D6659A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0.29636909379928367;
+	setAttr ".ktv[0]"  4 0.29636909379928367;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_04_Ctrl_rotateZ";
 	rename -uid "8A11B155-42EB-E795-7D39-18872A292FBB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 8.5348455607363896;
+	setAttr ".ktv[0]"  4 8.5348455607363896;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_04_Knuckle_01_Ctrl_rotateZ";
 	rename -uid "FAF4CF0F-456D-D19A-F6B5-BF9FB97F4399";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 -11.701867361102241;
+	setAttr ".ktv[0]"  4 -11.701867361102243;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_04_Knuckle_01_Ctrl_rotateX";
 	rename -uid "92F90712-48A7-9810-6757-B7ACB3397152";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_04_Knuckle_01_Ctrl_rotateY";
 	rename -uid "9F7FDE66-46A0-2AB3-536E-C985D6549E9D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_02_Knuckle_01_Ctrl_rotateZ";
 	rename -uid "5048C038-4F59-06B3-3BAB-DBBACB13EF1F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 5.6978111310104627;
+	setAttr ".ktv[0]"  4 5.6978111310104627;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_02_Knuckle_01_Ctrl_rotateX";
 	rename -uid "0D1157FF-4525-2FAE-A652-46B9CA7953A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_02_Knuckle_01_Ctrl_rotateY";
 	rename -uid "49CB0387-4D60-B12E-BB6D-73B6F53D307D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_03_Ctrl_rotateZ";
 	rename -uid "A2A52498-4964-0409-3989-F891D2584314";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 5.0827739397316911;
+	setAttr ".ktv[0]"  4 5.0827739397316911;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_03_Ctrl_rotateX";
 	rename -uid "604A7066-4431-AE08-E6EF-899F2C61C9F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_03_Ctrl_rotateY";
 	rename -uid "62157B94-4D6E-13A2-B29F-4397AA7F04C9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_03_Knuckle_02_Ctrl_rotateZ";
 	rename -uid "C65A027C-46F6-49CE-118D-ADB24F0B80B6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 3.724720181197906;
+	setAttr ".ktv[0]"  4 3.724720181197906;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_03_Knuckle_02_Ctrl_rotateX";
 	rename -uid "AFF1979F-47CF-ECBB-BDE4-E58DB73623D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_Finger_03_Knuckle_02_Ctrl_rotateY";
 	rename -uid "B8B9E7EF-4765-7392-D3D8-5BB469E8A20E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 0;
+	setAttr ".ktv[0]"  4 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_01_Ctrl_rotateY";
 	rename -uid "5CD060E5-4663-7F50-6AEF-4E8E9FB4F9AE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 24.35794399898478;
+	setAttr ".ktv[0]"  4 24.35794399898478;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_01_Ctrl_rotateX";
 	rename -uid "9BB19CF7-4536-8327-E5FE-0C87C5033FC2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 10.872787421394648;
+	setAttr ".ktv[0]"  4 10.872787421394648;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "R_MetCarp_01_Ctrl_rotateZ";
 	rename -uid "1DFBCA58-48D6-A6CB-6327-67BACCAF9BF6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  8 16.6478418849943;
+	setAttr ".ktv[0]"  4 16.6478418849943;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "Head_Ctrl_rotateX";
 	rename -uid "F7243914-4A36-6FEB-55E9-FFA9A8B3ABD4";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  61 0 70 0 72 0 74 -8.1554394860983219 76 -8.3645411849146569
-		 78 -7.5842807283088458 80 -7.3885674655762985;
+	setAttr -s 7 ".ktv[0:6]"  30.5 0 35 0 36 0 37 -8.1554394860983219
+		 38 -8.3645411849146569 39 -7.5842807283088458 40 -7.3885674655762985;
 	setAttr -s 7 ".kit[0:6]"  18 18 18 1 1 1 18;
 	setAttr -s 7 ".kix[3:6]"  1 1 1 1;
 	setAttr -s 7 ".kiy[3:6]"  0 0 0 0;
@@ -2799,8 +3094,8 @@ createNode animCurveTA -n "Head_Ctrl_rotateY";
 	rename -uid "8C4479B6-4198-B742-91E4-A8B551B089DB";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  61 0 70 0 72 0 74 2.883069637760534 76 -2.1990728310482459
-		 78 -4.1649996409107342 80 -4.5043054531342097;
+	setAttr -s 7 ".ktv[0:6]"  30.5 0 35 0 36 0 37 2.883069637760534 38 -2.1990728310482459
+		 39 -4.1649996409107342 40 -4.5043054531342097;
 	setAttr -s 7 ".kit[0:6]"  18 18 18 1 1 1 18;
 	setAttr -s 7 ".kix[3:6]"  1 1 1 1;
 	setAttr -s 7 ".kiy[3:6]"  0 0 0 0;
@@ -2808,8 +3103,8 @@ createNode animCurveTA -n "Head_Ctrl_rotateZ";
 	rename -uid "6C2D2672-40C3-B7A1-A856-F99F6DE95EB6";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  61 0 70 1.1117487735933067 72 1.4041832101659961
-		 74 -7.9320450830047697 76 -41.898144146964249 78 -55.88304905646168 80 -58.472022373420131;
+	setAttr -s 7 ".ktv[0:6]"  30.5 0 35 1.1117487735933067 36 1.4041832101659961
+		 37 -7.9320450830047697 38 -41.898144146964249 39 -55.88304905646168 40 -58.472022373420131;
 	setAttr -s 7 ".kit[0:6]"  18 18 18 1 1 1 18;
 	setAttr -s 7 ".kix[3:6]"  1 1 1 1;
 	setAttr -s 7 ".kiy[3:6]"  0 0 0 0;
@@ -2817,7 +3112,7 @@ createNode animCurveTA -n "Neck_02_Ctrl_rotateX";
 	rename -uid "E6546F38-4EEB-D9B6-7870-D783D03D2502";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  61 0 70 0 72 0 76 0 78 0 80 0;
+	setAttr -s 6 ".ktv[0:5]"  30.5 0 35 0 36 0 38 0 39 0 40 0;
 	setAttr -s 6 ".kit[0:5]"  18 18 18 1 1 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
 	setAttr -s 6 ".kiy[3:5]"  0 0 0;
@@ -2825,7 +3120,7 @@ createNode animCurveTA -n "Neck_02_Ctrl_rotateY";
 	rename -uid "73D445F1-4C07-6CF0-704D-AB8EBC5707EB";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  61 0 70 0 72 0 76 0 78 0 80 0;
+	setAttr -s 6 ".ktv[0:5]"  30.5 0 35 0 36 0 38 0 39 0 40 0;
 	setAttr -s 6 ".kit[0:5]"  18 18 18 1 1 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
 	setAttr -s 6 ".kiy[3:5]"  0 0 0;
@@ -2833,8 +3128,8 @@ createNode animCurveTA -n "Neck_02_Ctrl_rotateZ";
 	rename -uid "5B01B856-477E-59C8-41F0-C6A3732460F5";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  61 0 70 1.1117487735933067 72 1.4041832101659961
-		 76 10.323214980407036 78 10.323214980407036 80 10.323214980407036;
+	setAttr -s 6 ".ktv[0:5]"  30.5 0 35 1.1117487735933067 36 1.4041832101659961
+		 38 10.323214980407036 39 10.323214980407036 40 10.323214980407036;
 	setAttr -s 6 ".kit[0:5]"  18 18 18 1 1 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
 	setAttr -s 6 ".kiy[3:5]"  0 0 0;
@@ -2842,7 +3137,7 @@ createNode animCurveTA -n "Neck_01_Ctrl_rotateX";
 	rename -uid "06EA0A47-4DBD-6DF8-28DC-ADADB7FCC3AC";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  61 0 70 0 72 0 76 0 78 0 80 0;
+	setAttr -s 6 ".ktv[0:5]"  30.5 0 35 0 36 0 38 0 39 0 40 0;
 	setAttr -s 6 ".kit[0:5]"  18 18 18 1 1 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
 	setAttr -s 6 ".kiy[3:5]"  0 0 0;
@@ -2850,7 +3145,7 @@ createNode animCurveTA -n "Neck_01_Ctrl_rotateY";
 	rename -uid "26E56762-4B95-1226-D5C4-DA97833B1429";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  61 0 70 0 72 0 76 0 78 0 80 0;
+	setAttr -s 6 ".ktv[0:5]"  30.5 0 35 0 36 0 38 0 39 0 40 0;
 	setAttr -s 6 ".kit[0:5]"  18 18 18 1 1 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
 	setAttr -s 6 ".kiy[3:5]"  0 0 0;
@@ -2858,8 +3153,8 @@ createNode animCurveTA -n "Neck_01_Ctrl_rotateZ";
 	rename -uid "0755A79A-47C9-2F06-1566-9BBAE9AEB4A1";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  61 0 70 1.1117487735933067 72 1.4041832101659961
-		 76 10.323214980407036 78 10.323214980407036 80 10.323214980407036;
+	setAttr -s 6 ".ktv[0:5]"  30.5 0 35 1.1117487735933067 36 1.4041832101659961
+		 38 10.323214980407036 39 10.323214980407036 40 10.323214980407036;
 	setAttr -s 6 ".kit[0:5]"  18 18 18 1 1 18;
 	setAttr -s 6 ".kix[3:5]"  1 1 1;
 	setAttr -s 6 ".kiy[3:5]"  0 0 0;
@@ -2867,185 +3162,185 @@ createNode animCurveTA -n "Render_Cam_2_rotateX";
 	rename -uid "1A6787E1-4BFE-66BC-4EFA-76BF03842FD2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  61 10.686005784407065;
+	setAttr ".ktv[0]"  30.5 10.686005784407065;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "Render_Cam_2_rotateY";
 	rename -uid "410ED1F4-4FD9-175E-81A6-428EB3431F3A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  61 -789.20930634745957;
+	setAttr ".ktv[0]"  30.5 -789.20930634745957;
 	setAttr ".kot[0]"  5;
 createNode animCurveTA -n "Render_Cam_2_rotateZ";
 	rename -uid "2DE604DE-4CA3-3230-D38E-F590D3225B78";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  61 -0.88709286769968898;
+	setAttr ".ktv[0]"  30.5 -0.88709286769968898;
 	setAttr ".kot[0]"  5;
 createNode animCurveTU -n "Render_Cam_2_visibility";
 	rename -uid "E50A0D24-4FCD-849D-1CD6-CA8FDCEE22C6";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  61 0;
+	setAttr ".ktv[0]"  30.5 0;
 	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "Render_Cam_2_translateX";
 	rename -uid "725B8246-4362-15CA-F4CE-F9AE0A8861CD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  61 -1547.9876801389755;
+	setAttr ".ktv[0]"  30.5 -1547.9876801389755;
 	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "Render_Cam_2_translateY";
 	rename -uid "24430D99-4624-EF6F-B3BD-C7BE0D20244B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  61 -399.8564432268646;
+	setAttr ".ktv[0]"  30.5 -399.8564432268646;
 	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "Render_Cam_2_translateZ";
 	rename -uid "11EE0BC6-4D1B-BAC6-17D1-9FBCA74BB013";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  61 931.7678082394491;
+	setAttr ".ktv[0]"  30.5 931.7678082394491;
 	setAttr ".kot[0]"  5;
 createNode animCurveTU -n "Render_Cam_2_scaleX";
 	rename -uid "9D33887D-43B8-7792-9271-01B550D7320E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  61 1;
+	setAttr ".ktv[0]"  30.5 1;
 	setAttr ".kot[0]"  5;
 createNode animCurveTU -n "Render_Cam_2_scaleY";
 	rename -uid "5E69580C-4115-5D44-0945-F3A888A1CE59";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  61 1;
+	setAttr ".ktv[0]"  30.5 1;
 	setAttr ".kot[0]"  5;
 createNode animCurveTU -n "Render_Cam_2_scaleZ";
 	rename -uid "73173888-40B7-8D70-79EF-699451EF28BA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  61 1;
+	setAttr ".ktv[0]"  30.5 1;
 	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "L_Brow_Ctrl_translateX";
 	rename -uid "B304C1A7-46BC-CD5B-9C56-CABA5A944E8B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  61 5.9276368535865487e-14 72 5.9276368535865487e-14
-		 74 8.3524333283069296e-14 76 2.0211349954779578e-13 78 1.140931966958636e-13 80 0.16981786421328765
-		 82 0.07974916447354842;
+	setAttr -s 7 ".ktv[0:6]"  30.5 5.9276368535865487e-14 36 5.9276368535865487e-14
+		 37 8.3524333283069296e-14 38 2.0211349954779578e-13 39 1.140931966958636e-13 40 0.16981786421328765
+		 41 0.07974916447354842;
 	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "L_Brow_Ctrl_translateY";
 	rename -uid "92BBEE8C-41CF-99AB-CF96-2D95F0599F6E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  61 0 72 -0.39250983490092117 74 -0.70014328718534902
-		 76 -0.23355741397827623 78 0.24703509519396499 80 1.3613035811154428 82 1.0490740764316011;
+	setAttr -s 7 ".ktv[0:6]"  30.5 0 36 -0.39250983490092117 37 -0.70014328718534902
+		 38 -0.23355741397827623 39 0.24703509519396499 40 1.3613035811154428 41 1.0490740764316011;
 	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "L_Brow_Ctrl_translateZ";
 	rename -uid "FE6416E3-4134-B980-03A5-D683D4505CDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  61 3.0339717283639489e-14 72 3.0339717283639489e-14
-		 74 6.7585965036337514e-14 76 -9.6825759215990459e-15 78 5.4264671098605555e-14 80 3.0661489514895168e-13
-		 82 2.9918247241612905e-13;
+	setAttr -s 7 ".ktv[0:6]"  30.5 3.0339717283639489e-14 36 3.0339717283639489e-14
+		 37 6.7585965036337514e-14 38 -9.6825759215990459e-15 39 5.4264671098605555e-14 40 3.0661489514895168e-13
+		 41 2.9918247241612905e-13;
 	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "R_Brow_Ctrl_translateX";
 	rename -uid "BC66155E-4282-53DA-9042-85943DCA5565";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  61 -9.6394246751341228e-14 72 -9.6394246751341228e-14
-		 74 -3.3075885780275982e-13 76 -4.7420227466954401e-13 78 -5.4677616601050971e-13
-		 80 -0.21497646523415315 82 -0.14561925061700293;
+	setAttr -s 7 ".ktv[0:6]"  30.5 -9.6394246751341228e-14 36 -9.6394246751341228e-14
+		 37 -3.3075885780275982e-13 38 -4.7420227466954401e-13 39 -5.4677616601050971e-13
+		 40 -0.21497646523415315 41 -0.14561925061700293;
 	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "R_Brow_Ctrl_translateY";
 	rename -uid "8A4A3271-4E21-9210-148D-9CAFF51CE434";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  61 0 72 -0.36506930969050638 74 -0.59165848662052356
-		 76 -0.20775639509378629 78 0.49372951752538585 80 1.547662758843549 82 1.31254107407425;
+	setAttr -s 7 ".ktv[0:6]"  30.5 0 36 -0.36506930969050638 37 -0.59165848662052356
+		 38 -0.20775639509378629 39 0.49372951752538585 40 1.547662758843549 41 1.31254107407425;
 	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "R_Brow_Ctrl_translateZ";
 	rename -uid "E165C01D-4C61-5D2E-24FA-C78067B549AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  61 -2.1240062660077275e-13 72 -2.1240062660077275e-13
-		 74 -6.4047996507082816e-13 76 -7.3238122380928083e-13 78 -1.3821235822497613e-12
-		 80 -1.2370347801660131e-12 82 -1.1381872007387717e-12;
+	setAttr -s 7 ".ktv[0:6]"  30.5 -2.1240062660077275e-13 36 -2.1240062660077275e-13
+		 37 -6.4047996507082816e-13 38 -7.3238122380928083e-13 39 -1.3821235822497613e-12
+		 40 -1.2370347801660131e-12 41 -1.1381872007387717e-12;
 	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTA -n "L_Brow_Ctrl_rotateX";
 	rename -uid "441EC73F-42E6-E9EA-B889-C3ACFEFC5723";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 0 80 0;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 0 40 0;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "L_Brow_Ctrl_rotateY";
 	rename -uid "F1FD0C1F-4C5C-D62B-3411-0A9E25423165";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 0 80 0;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 0 40 0;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "L_Brow_Ctrl_rotateZ";
 	rename -uid "A1746F41-42A3-3DC6-7D08-7985E5D1EC8F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 -8.665370206659329 80 -16.091239271228144;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 -8.665370206659329 40 -16.091239271228144;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "R_Brow_Ctrl_rotateX";
 	rename -uid "33EFD6FC-441E-9403-AA8F-FC9D0BF96B84";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 0 80 0;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 0 40 0;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "R_Brow_Ctrl_rotateY";
 	rename -uid "ABB5B1F0-4DE0-A6EF-2242-AD9098DB0A10";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 0 80 0;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 0 40 0;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "R_Brow_Ctrl_rotateZ";
 	rename -uid "3C359462-4603-14B6-5554-C1B1E5BFC32A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 10.242267460483117 80 16.43523371525411;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 10.242267460483117 40 16.43523371525411;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTA -n "L_Socket_Lower_Ctrl_rotateX";
 	rename -uid "C5598BA5-463A-52D4-5277-AC8E5C279928";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  61 0 78 0 80 0 82 0;
+	setAttr -s 4 ".ktv[0:3]"  30.5 0 39 0 40 0 41 0;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTA -n "L_Socket_Lower_Ctrl_rotateY";
 	rename -uid "8C1B006B-41B4-92E2-7635-32BB8F881CBF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  61 0 78 0 80 0 82 0;
+	setAttr -s 4 ".ktv[0:3]"  30.5 0 39 0 40 0 41 0;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTA -n "L_Socket_Lower_Ctrl_rotateZ";
 	rename -uid "6A1F87A6-4BA9-5412-32EC-C1986A49EF2B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  61 0 78 -2 80 -6.0000000000000009 82 -12.996846634712439;
+	setAttr -s 4 ".ktv[0:3]"  30.5 0 39 -2 40 -6.0000000000000009 41 -12.996846634712439;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTA -n "R_Socket_Lower_Ctrl_rotateX";
 	rename -uid "9A98A1AD-42D7-DC2C-E974-00B003109AE0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  61 0 78 0 80 0 82 0;
+	setAttr -s 4 ".ktv[0:3]"  30.5 0 39 0 40 0 41 0;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTA -n "R_Socket_Lower_Ctrl_rotateY";
 	rename -uid "C0B37365-44E0-9B25-5AFB-D1AB7C2AF328";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  61 0 78 0 80 0 82 0;
+	setAttr -s 4 ".ktv[0:3]"  30.5 0 39 0 40 0 41 0;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTA -n "R_Socket_Lower_Ctrl_rotateZ";
 	rename -uid "D4F51179-45FD-7788-081A-AD8D656EB099";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  61 0 78 2 80 6.0000000000000009 82 13.748966780036147;
+	setAttr -s 4 ".ktv[0:3]"  30.5 0 39 2 40 6.0000000000000009 41 13.748966780036147;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTL -n "Mouth_Ctrl_translateX";
 	rename -uid "0DE5236D-41FA-C8FA-D88E-B9B1B78FDAD0";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 0.67300922822743192 80 1.0957716943559646;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 0.67300922822743192 40 1.0957716943559646;
 	setAttr -s 3 ".kit[0:2]"  18 1 18;
 	setAttr -s 3 ".kix[1:2]"  1 1;
 	setAttr -s 3 ".kiy[1:2]"  0 0;
@@ -3053,7 +3348,7 @@ createNode animCurveTL -n "Mouth_Ctrl_translateY";
 	rename -uid "99E2731A-4D2B-7C61-F91A-37BC68A83D17";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 -0.40101272295568635 80 -0.73125530415466411;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 -0.40101272295568635 40 -0.73125530415466411;
 	setAttr -s 3 ".kit[0:2]"  18 1 18;
 	setAttr -s 3 ".kix[1:2]"  1 1;
 	setAttr -s 3 ".kiy[1:2]"  0 0;
@@ -3061,7 +3356,7 @@ createNode animCurveTL -n "Mouth_Ctrl_translateZ";
 	rename -uid "07EE9391-477C-6D51-2E73-4298F0EFCADF";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 -2.1600833863443207 80 -2.1600833863441045;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 -2.1600833863443207 40 -2.1600833863441045;
 	setAttr -s 3 ".kit[0:2]"  18 1 18;
 	setAttr -s 3 ".kix[1:2]"  1 1;
 	setAttr -s 3 ".kiy[1:2]"  0 0;
@@ -3069,7 +3364,7 @@ createNode animCurveTA -n "Mouth_Ctrl_rotateX";
 	rename -uid "30D856A6-48FE-337F-1977-9CAEB7DF7F69";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 0 80 0;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 0 40 0;
 	setAttr -s 3 ".kit[0:2]"  18 1 18;
 	setAttr -s 3 ".kix[1:2]"  1 1;
 	setAttr -s 3 ".kiy[1:2]"  0 0;
@@ -3077,7 +3372,7 @@ createNode animCurveTA -n "Mouth_Ctrl_rotateY";
 	rename -uid "F2FA656A-4673-6639-D69F-0680CF0DDD03";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 0 80 0;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 0 40 0;
 	setAttr -s 3 ".kit[0:2]"  18 1 18;
 	setAttr -s 3 ".kix[1:2]"  1 1;
 	setAttr -s 3 ".kiy[1:2]"  0 0;
@@ -3085,44 +3380,428 @@ createNode animCurveTA -n "Mouth_Ctrl_rotateZ";
 	rename -uid "29D4354C-44F6-B926-8A4C-B5B920AAC65B";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  61 0 78 -2.0910706654828943 80 -6.7073312904020286;
+	setAttr -s 3 ".ktv[0:2]"  30.5 0 39 -2.0910706654828943 40 -6.7073312904020286;
 	setAttr -s 3 ".kit[0:2]"  18 1 18;
 	setAttr -s 3 ".kix[1:2]"  1 1;
 	setAttr -s 3 ".kiy[1:2]"  0 0;
+createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
+	rename -uid "817ACA3A-455B-DC17-9DD7-E0A85EED7464";
+createNode aiStandardSurface -n "SkellyDadPhotoMat";
+	rename -uid "28448E1A-471C-EAEF-11C0-87BBCF7D8457";
+createNode shadingEngine -n "aiStandardSurface1SG";
+	rename -uid "8B1F7DFA-4B1A-D657-60DF-3DAD2D1442FF";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "00797AC3-4660-FFB1-9D9D-75B2C8512A9F";
+createNode file -n "file1";
+	rename -uid "2C8582D7-4472-FBE7-82B6-7ABCCD2BDF44";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/WorkDayTextures/Textures-20260401T020828Z-3-001/Textures/SkellyDadPhoto/SkellyDadPhotoWithBorder(Writing)_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture1";
+	rename -uid "E958D228-430B-A0E6-56F9-7DB8E00D4E86";
+createNode polyPlanarProj -n "polyPlanarProj1";
+	rename -uid "C672F65B-4645-2D4F-9490-CDA7EBF126B2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:99]";
+	setAttr ".ix" -type "matrix" 7.9240759522725712 -3.0256678945368045 -1.2556996548015591 0
+		 4.876362420390346 12.84313428872842 -0.17392128110767194 0 2.0001769691154045 -0.56991557784930702 13.995328756006627 0
+		 -1455.7914904012246 -401.64415108966978 908.61192563592078 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -1455.79150390625 -401.64407348632812 908.61187744140625 ;
+	setAttr ".ro" -type "double3" -43.538357874388147 81.400000742057586 -3.4145923532388112e-06 ;
+	setAttr ".ps" -type "double2" 15.965383903249403 10.678102415786952 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 0.29076316952705383 -1.3484303951263428 -0.71677714586257935 -0.71676278114318848
+		 8.2900616707770758e-17 1.4351822137832642 -0.68885374069213867 -0.68883997201919556
+		 -1.9225819110870361 -0.20393091440200806 -0.10840234905481339 -0.10840018093585968
+		 2170.17138671875 -1201.306884765625 -1183.7379150390625 -1183.5142822265625;
+	setAttr ".prgt" 1680;
+	setAttr ".ptop" 1650;
+createNode polyTweakUV -n "polyTweakUV1";
+	rename -uid "77C1EB60-4EFA-E66C-E12E-F5B9A5C59F45";
+	setAttr ".uopa" yes;
+	setAttr -s 121 ".uvtk[0:120]" -type "float2" 0.0012633204 0.5025965 -0.0095078805
+		 0.44829684 0.0031119883 0.42945504 0.014586538 0.48425084 -0.020478437 0.39481789
+		 -0.0085686594 0.37548357 -0.031637836 0.3421846 -0.020461999 0.32238132 -0.043007214
+		 0.29045945 -0.032573536 0.27009851 -0.05459227 0.23959361 -0.044913042 0.21872692
+		 -0.066391766 0.18969564 -0.057483707 0.16825588 -0.078415528 0.14071114 -0.070287064
+		 0.11872941 -0.090669475 0.092730552 -0.08333464 0.070166767 -0.10316531 0.045760114
+		 -0.096637681 0.022584274 -0.11590151 -0.00018072128 -0.11019492 -0.023982696 0.016884349
+		 0.41086298 0.029049389 0.46611345 0.0045052692 0.35644591 -0.0080976412 0.30281061
+		 -0.020930018 0.25004736 -0.03399894 0.19814314 -0.047313992 0.14714383 -0.060878698
+		 0.097032979 -0.074696839 0.047918271 -0.088778853 -0.00027432386 -0.10313299 -0.047414638
+		 0.031789687 0.39252335 0.044619288 0.44822794 0.018731408 0.33761066 0.0054391846
+		 0.28351921 -0.0080982819 0.23024769 -0.021878581 0.17784236 -0.035917018 0.12629987
+		 -0.050213937 0.07567966 -0.064778879 0.025968812 -0.079624966 -0.022782033 -0.094751224
+		 -0.070540018 0.047801759 0.37443322 0.061277416 0.43057102 0.034083929 0.31907201
+		 0.020116797 0.26447976 0.0059031174 0.21074675 -0.0085697845 0.15781175 -0.023314666
+		 0.10578191 -0.038320933 0.054608304 -0.05361617 0.0043514008 -0.069194928 -0.044956442
+		 -0.085071638 -0.093310297 0.064896435 0.35659653 0.079008088 0.41318738 0.050535765
+		 0.30075604 0.03592163 0.24574028 0.021041384 0.19148569 0.0058973655 0.13808383 -0.0095223272
+		 0.085530162 -0.025230628 0.033836562 -0.041225228 -0.016949488 -0.057524603 -0.066824943
+		 -0.074127212 -0.11577273 0.083054796 0.33896923 0.097786382 0.39598882 0.068071038
+		 0.28271151 0.052822139 0.22719626 0.037299778 0.17249797 0.021502994 0.11861138 0.0054188594
+		 0.065546915 -0.010957457 0.013334863 -0.027641039 -0.03797688 -0.044629727 -0.088403076
+		 -0.061941549 -0.1378852 0.10226245 0.32158601 0.11758722 0.37903297 0.086666539 0.2648797
+		 0.070802957 0.20894243 0.054657843 0.15376998 0.038226511 0.099407524 0.021499835
+		 0.045849066 0.0044680461 -0.006848664 -0.012881614 -0.058700088 -0.030546106 -0.10965806
+		 -0.048538242 -0.15969118 0.12248911 0.30444932 0.1383975 0.36229479 0.10630824 0.24731058
+		 0.089840248 0.19090481 0.073093027 0.13530515 0.056041386 0.080459803 0.038687136
+		 0.026439011 0.021022281 -0.026773501 0.0030259714 -0.079131491 -0.015290596 -0.13060461
+		 -0.033946965 -0.18118139 0.14372246 0.28751725 0.16020314 0.34579086 0.12696564 0.22994502
+		 0.10992093 0.17314793 0.092578724 0.11707045 0.074930221 0.061770421 0.056970026
+		 0.0072733583 0.038682427 -0.046421867 0.020070275 -0.099285424 0.0011143312 -0.15127632
+		 -0.018191971 -0.20240834 0.16594402 0.27079237 0.18297379 0.32946604 0.14863048 0.212833
+		 0.13101925 0.15557803 0.11309732 0.099068254 0.094868377 0.043327387 0.076315477
+		 -0.011645764 0.057434764 -0.065822721 0.038210895 -0.11914948 0.018636905 -0.17167094
+		 -0.001289228 -0.2233016;
+createNode reference -n "ExtraRenderPassesRN";
+	rename -uid "8EC1954C-4E60-89E6-F297-E594320D8153";
+	setAttr -s 10 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"ExtraRenderPassesRN"
+		"ExtraRenderPassesRN" 0
+		"ExtraRenderPassesRN" 10
+		5 4 "ExtraRenderPassesRN" "|ExtraRenderPasses:PlaceTexture3D_Grp.translateX" 
+		"ExtraRenderPassesRN.placeHolderList[1]" ""
+		5 4 "ExtraRenderPassesRN" "|ExtraRenderPasses:PlaceTexture3D_Grp.translateY" 
+		"ExtraRenderPassesRN.placeHolderList[2]" ""
+		5 4 "ExtraRenderPassesRN" "|ExtraRenderPasses:PlaceTexture3D_Grp.translateZ" 
+		"ExtraRenderPassesRN.placeHolderList[3]" ""
+		5 4 "ExtraRenderPassesRN" "|ExtraRenderPasses:PlaceTexture3D_Grp.visibility" 
+		"ExtraRenderPassesRN.placeHolderList[4]" ""
+		5 4 "ExtraRenderPassesRN" "|ExtraRenderPasses:PlaceTexture3D_Grp.rotateX" 
+		"ExtraRenderPassesRN.placeHolderList[5]" ""
+		5 4 "ExtraRenderPassesRN" "|ExtraRenderPasses:PlaceTexture3D_Grp.rotateY" 
+		"ExtraRenderPassesRN.placeHolderList[6]" ""
+		5 4 "ExtraRenderPassesRN" "|ExtraRenderPasses:PlaceTexture3D_Grp.rotateZ" 
+		"ExtraRenderPassesRN.placeHolderList[7]" ""
+		5 4 "ExtraRenderPassesRN" "|ExtraRenderPasses:PlaceTexture3D_Grp.scaleX" 
+		"ExtraRenderPassesRN.placeHolderList[8]" ""
+		5 4 "ExtraRenderPassesRN" "|ExtraRenderPasses:PlaceTexture3D_Grp.scaleY" 
+		"ExtraRenderPassesRN.placeHolderList[9]" ""
+		5 4 "ExtraRenderPassesRN" "|ExtraRenderPasses:PlaceTexture3D_Grp.scaleZ" 
+		"ExtraRenderPassesRN.placeHolderList[10]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode animCurveTL -n "PlaceTexture3D_Grp_translateX";
+	rename -uid "1E0EF5E5-41F2-21C9-285D-469F57B3F169";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 -1468.7557286537869 31 -1474.9663073078091;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "PlaceTexture3D_Grp_translateY";
+	rename -uid "BF1C7877-4EF8-77F0-D5EE-0C9BDEE41206";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 -396.95539011000028 31 -384.28789221824195;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "PlaceTexture3D_Grp_translateZ";
+	rename -uid "AF311792-453F-CF90-6772-3C8EB43F861C";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 914.15734228233146 31 903.96758848449895;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "PlaceTexture3D_Grp_visibility";
+	rename -uid "D5929471-43E7-448D-FC40-63BAA21C52DF";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 1 31 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTA -n "PlaceTexture3D_Grp_rotateX";
+	rename -uid "3138B8CD-4E93-5260-397C-158BDB056563";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 0 31 0;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTA -n "PlaceTexture3D_Grp_rotateY";
+	rename -uid "B08099AE-431C-F11F-A06B-77B48AE5B6A0";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 0 31 0;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTA -n "PlaceTexture3D_Grp_rotateZ";
+	rename -uid "EDA8C4F9-4D13-D136-4104-09AF5835E92F";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 0 31 0;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "PlaceTexture3D_Grp_scaleX";
+	rename -uid "0D33F57F-4852-9B87-748B-01AD8D35CB12";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 1 31 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "PlaceTexture3D_Grp_scaleY";
+	rename -uid "0DAA3CBD-4E09-0CEB-EDE7-85BC2387CE3C";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 1 31 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTU -n "PlaceTexture3D_Grp_scaleZ";
+	rename -uid "702FAD7A-4A23-7BF4-4B4C-7E903148A29E";
+	setAttr ".tan" 16;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  0 1 31 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 select -ne :time1;
-	setAttr ".o" 61;
-	setAttr ".unw" 61;
+	setAttr -av -k on ".cch";
+	setAttr -k on ".fzn";
+	setAttr -av -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".o" 60;
+	setAttr -av -k on ".unw" 60;
+	setAttr -av -k on ".etw";
+	setAttr -av -k on ".tps";
+	setAttr -av -k on ".tms";
 select -ne :hardwareRenderingGlobals;
+	setAttr -av -k on ".cch";
+	setAttr -av -k on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
+	setAttr -k on ".hwi";
+	setAttr -av ".ta";
+	setAttr -av ".tq";
+	setAttr -av ".etmr";
+	setAttr -av ".tmr";
+	setAttr -av ".aoon";
+	setAttr -av ".aoam";
+	setAttr -av ".aora";
+	setAttr -k on ".hff";
+	setAttr -av -k on ".hfd";
+	setAttr -av -k on ".hfs";
+	setAttr -av -k on ".hfe";
+	setAttr -av ".hfc";
+	setAttr -av -k on ".hfcr";
+	setAttr -av -k on ".hfcg";
+	setAttr -av -k on ".hfcb";
+	setAttr -av -k on ".hfa";
+	setAttr -av ".mbe";
+	setAttr -av -k on ".mbsof";
+	setAttr -k on ".blen";
+	setAttr -k on ".blat";
+	setAttr -av ".msaa";
+	setAttr ".dli" 1;
 	setAttr ".fprt" yes;
+	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 58 ".st";
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 98 ".st";
+	setAttr -cb on ".an";
+	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 select -ne :defaultShaderList1;
-	setAttr -s 23 ".s";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 68 ".s";
 select -ne :postProcessList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 5 ".u";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 137 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 11 ".r";
+	setAttr -k on ".ihi";
+	setAttr -s 22 ".r";
+select -ne :lightList1;
+	setAttr -s 12 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 6 ".tx";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 113 ".tx";
+select -ne :standardSurface1;
+	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+	setAttr ".sr" 0.40000000596046448;
+select -ne :openPBR_shader1;
+	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 84 ".dsm";
-	setAttr ".ro" yes;
-	setAttr -s 14 ".gn";
+	setAttr -av -k on ".cch";
+	setAttr -k on ".fzn";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".bbx";
+	setAttr -k on ".vwm";
+	setAttr -k on ".tpv";
+	setAttr -k on ".uit";
+	setAttr -s 42 ".dsm";
+	setAttr -k on ".mwc";
+	setAttr -cb on ".an";
+	setAttr -cb on ".il";
+	setAttr -cb on ".vo";
+	setAttr -cb on ".eo";
+	setAttr -cb on ".fo";
+	setAttr -cb on ".epo";
+	setAttr -k on ".ro" yes;
+	setAttr -s 15 ".gn";
 select -ne :initialParticleSE;
-	setAttr ".ro" yes;
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".mwc";
+	setAttr -cb on ".an";
+	setAttr -cb on ".il";
+	setAttr -cb on ".vo";
+	setAttr -cb on ".eo";
+	setAttr -cb on ".fo";
+	setAttr -cb on ".epo";
+	setAttr -k on ".ro" yes;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
-	setAttr ".ren" -type "string" "arnold";
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -av -k on ".macc";
+	setAttr -av -k on ".macd";
+	setAttr -av -k on ".macq";
+	setAttr -av -k on ".mcfr";
+	setAttr -cb on ".ifg";
+	setAttr -av -k on ".clip";
+	setAttr -av -k on ".edm";
+	setAttr -av -k on ".edl";
+	setAttr -av -cb on ".ren" -type "string" "arnold";
+	setAttr -av -k on ".esr";
+	setAttr -av -k on ".ors";
+	setAttr -cb on ".sdf";
+	setAttr -av -k on ".outf";
+	setAttr -av -cb on ".imfkey";
+	setAttr -av -k on ".gama";
+	setAttr -k on ".exrc";
+	setAttr -k on ".expt";
+	setAttr -av -k on ".an";
+	setAttr -cb on ".ar";
+	setAttr -av -k on ".fs";
+	setAttr -av -k on ".ef";
+	setAttr -av -k on ".bfs";
+	setAttr -av -cb on ".me";
+	setAttr -cb on ".se";
+	setAttr -av -k on ".be";
+	setAttr -av -cb on ".ep";
+	setAttr -av -k on ".fec";
+	setAttr -av -k on ".ofc";
+	setAttr -cb on ".ofe";
+	setAttr -cb on ".efe";
+	setAttr -cb on ".oft";
+	setAttr -cb on ".umfn";
+	setAttr -cb on ".ufe";
+	setAttr -av -cb on ".pff";
+	setAttr -av -cb on ".peie";
+	setAttr -av -cb on ".ifp";
+	setAttr -k on ".rv";
+	setAttr -av -k on ".comp";
+	setAttr -av -k on ".cth";
+	setAttr -av -k on ".soll";
+	setAttr -cb on ".sosl";
+	setAttr -av -k on ".rd";
+	setAttr -av -k on ".lp";
+	setAttr -av -k on ".sp";
+	setAttr -av -k on ".shs";
+	setAttr -av -k on ".lpr";
+	setAttr -cb on ".gv";
+	setAttr -cb on ".sv";
+	setAttr -av -k on ".mm";
+	setAttr -av -k on ".npu";
+	setAttr -av -k on ".itf";
+	setAttr -av -k on ".shp";
+	setAttr -cb on ".isp";
+	setAttr -av -k on ".uf";
+	setAttr -av -k on ".oi";
+	setAttr -av -k on ".rut";
+	setAttr -av -k on ".mot";
+	setAttr -av -cb on ".mb";
+	setAttr -av -k on ".mbf";
+	setAttr -av -k on ".mbso";
+	setAttr -av -k on ".mbsc";
+	setAttr -av -k on ".afp";
+	setAttr -av -k on ".pfb";
+	setAttr -av -k on ".pram";
+	setAttr -av -k on ".poam";
+	setAttr -av -k on ".prlm";
+	setAttr -av -k on ".polm";
+	setAttr -av -cb on ".prm";
+	setAttr -av -cb on ".pom";
+	setAttr -cb on ".pfrm";
+	setAttr -cb on ".pfom";
+	setAttr -av -k on ".bll";
+	setAttr -av -k on ".bls";
+	setAttr -av -k on ".smv";
+	setAttr -av -k on ".ubc";
+	setAttr -av -k on ".mbc";
+	setAttr -cb on ".mbt";
+	setAttr -av -k on ".udbx";
+	setAttr -av -k on ".smc";
+	setAttr -av -k on ".kmv";
+	setAttr -cb on ".isl";
+	setAttr -cb on ".ism";
+	setAttr -cb on ".imb";
+	setAttr -av -k on ".rlen";
+	setAttr -av -k on ".frts";
+	setAttr -av -k on ".tlwd";
+	setAttr -av -k on ".tlht";
+	setAttr -av -k on ".jfc";
+	setAttr -cb on ".rsb";
+	setAttr -av -k on ".ope";
+	setAttr -av -k on ".oppf";
+	setAttr -av -k on ".rcp";
+	setAttr -av -k on ".icp";
+	setAttr -av -k on ".ocp";
+	setAttr -cb on ".hbl";
 	setAttr ".dss" -type "string" "lambert1";
 select -ne :defaultResolution;
-	setAttr ".pa" 1;
+	setAttr -av -k on ".cch";
+	setAttr -av -k on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -k on ".bnm";
+	setAttr -av -k on ".w";
+	setAttr -av -k on ".h";
+	setAttr -av -k on ".pa" 1;
+	setAttr -av -k on ".al";
+	setAttr -av -k on ".dar";
+	setAttr -av -k on ".ldar";
+	setAttr -av -k on ".dpi";
+	setAttr -av -k on ".off";
+	setAttr -av -k on ".fld";
+	setAttr -av -k on ".zsl";
+	setAttr -av -k on ".isu";
+	setAttr -av -k on ".pdu";
+select -ne :defaultLightSet;
+	setAttr -s 12 ".dsm";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -3133,10 +3812,46 @@ select -ne :defaultColorMgtGlobals;
 	setAttr ".otn" -type "string" "ACES 1.0 SDR-video (sRGB)";
 	setAttr ".potn" -type "string" "ACES 1.0 SDR-video (sRGB)";
 select -ne :hardwareRenderGlobals;
-	setAttr ".ctrs" 256;
-	setAttr ".btrs" 512;
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -av -k off -cb on ".ctrs" 256;
+	setAttr -av -k off -cb on ".btrs" 512;
+	setAttr -av -k off -cb on ".fbfm";
+	setAttr -av -k off -cb on ".ehql";
+	setAttr -av -k off -cb on ".eams";
+	setAttr -av -k off -cb on ".eeaa";
+	setAttr -av -k off -cb on ".engm";
+	setAttr -av -k off -cb on ".mes";
+	setAttr -av -k off -cb on ".emb";
+	setAttr -av -k off -cb on ".mbbf";
+	setAttr -av -k off -cb on ".mbs";
+	setAttr -av -k off -cb on ".trm";
+	setAttr -av -k off -cb on ".tshc";
+	setAttr -av -k off -cb on ".enpt";
+	setAttr -av -k off -cb on ".clmt";
+	setAttr -av -k off -cb on ".tcov";
+	setAttr -av -k off -cb on ".lith";
+	setAttr -av -k off -cb on ".sobc";
+	setAttr -av -k off -cb on ".cuth";
+	setAttr -av -k off -cb on ".hgcd";
+	setAttr -av -k off -cb on ".hgci";
+	setAttr -av -k off -cb on ".mgcs";
+	setAttr -av -k off -cb on ".twa";
+	setAttr -av -k off -cb on ".twz";
+	setAttr -k on ".hwcc";
+	setAttr -k on ".hwdp";
+	setAttr -k on ".hwql";
+	setAttr -k on ".hwfr";
+	setAttr -k on ".soll";
+	setAttr -k on ".sosl";
+	setAttr -k on ".bswa";
+	setAttr -k on ".shml";
+	setAttr -k on ".hwel";
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+	setAttr -s 2 ".sol";
+connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[163]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[164]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[165]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[166]";
@@ -3159,16 +3874,15 @@ connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[182]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[183]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[184]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[185]";
-connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[186]";
+connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[61]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[62]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[63]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[64]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[65]";
-connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[66]";
+connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[57]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[58]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[59]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[60]";
-connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[61]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[1]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[2]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[3]";
@@ -3225,7 +3939,7 @@ connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[53]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[54]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[55]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[56]";
-connectAttr "Photograph_white_box_geoShape.iog" "DragonGateCaveSetRN.phl[57]";
+connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[66]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[67]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[68]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[69]";
@@ -3322,7 +4036,7 @@ connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[159]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[160]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[161]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[162]";
-connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[163]";
+connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[186]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[187]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[188]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[189]";
@@ -3433,7 +4147,6 @@ connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[293]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[294]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[295]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[296]";
-connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[297]";
 connectAttr "COG_Ctrl_translateX.o" "SkeletonRN.phl[1]";
 connectAttr "COG_Ctrl_translateY.o" "SkeletonRN.phl[2]";
 connectAttr "COG_Ctrl_translateZ.o" "SkeletonRN.phl[3]";
@@ -3628,6 +4341,16 @@ connectAttr "R_Leg_IK_End_Ctrl_rotateZ.o" "SkeletonRN.phl[184]";
 connectAttr "R_Leg_IK_End_Ctrl_translateX.o" "SkeletonRN.phl[185]";
 connectAttr "R_Leg_IK_End_Ctrl_translateY.o" "SkeletonRN.phl[186]";
 connectAttr "R_Leg_IK_End_Ctrl_translateZ.o" "SkeletonRN.phl[187]";
+connectAttr "PlaceTexture3D_Grp_translateX.o" "ExtraRenderPassesRN.phl[1]";
+connectAttr "PlaceTexture3D_Grp_translateY.o" "ExtraRenderPassesRN.phl[2]";
+connectAttr "PlaceTexture3D_Grp_translateZ.o" "ExtraRenderPassesRN.phl[3]";
+connectAttr "PlaceTexture3D_Grp_visibility.o" "ExtraRenderPassesRN.phl[4]";
+connectAttr "PlaceTexture3D_Grp_rotateX.o" "ExtraRenderPassesRN.phl[5]";
+connectAttr "PlaceTexture3D_Grp_rotateY.o" "ExtraRenderPassesRN.phl[6]";
+connectAttr "PlaceTexture3D_Grp_rotateZ.o" "ExtraRenderPassesRN.phl[7]";
+connectAttr "PlaceTexture3D_Grp_scaleX.o" "ExtraRenderPassesRN.phl[8]";
+connectAttr "PlaceTexture3D_Grp_scaleY.o" "ExtraRenderPassesRN.phl[9]";
+connectAttr "PlaceTexture3D_Grp_scaleZ.o" "ExtraRenderPassesRN.phl[10]";
 connectAttr "Render_Cam_translateX.o" "Render_Cam.tx";
 connectAttr "Render_Cam_translateY.o" "Render_Cam.ty";
 connectAttr "Render_Cam_translateZ.o" "Render_Cam.tz";
@@ -3660,7 +4383,12 @@ connectAttr "Photograph_white_box_geo_parentConstraint1.cry" "Photograph_white_b
 		;
 connectAttr "Photograph_white_box_geo_parentConstraint1.crz" "Photograph_white_box_geo.rz"
 		;
-connectAttr "polyPlane1.out" "Photograph_white_box_geoShape.i";
+connectAttr "polyTweakUV1.out" "Photograph_white_box_geoShape.i";
+connectAttr "polyTweakUV1.uvtk[0]" "Photograph_white_box_geoShape.uvst[0].uvtw";
+connectAttr "Photograph_white_box_geo_parentConstraint1.w0" "Photograph_white_box_geo_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Photograph_white_box_geo_parentConstraint1_R_Arm_03_FK_CtrlW0.o" "Photograph_white_box_geo_parentConstraint1.w0"
+		;
 connectAttr "Photograph_white_box_geo.ro" "Photograph_white_box_geo_parentConstraint1.cro"
 		;
 connectAttr "Photograph_white_box_geo.pim" "Photograph_white_box_geo_parentConstraint1.cpim"
@@ -3669,14 +4397,12 @@ connectAttr "Photograph_white_box_geo.rp" "Photograph_white_box_geo_parentConstr
 		;
 connectAttr "Photograph_white_box_geo.rpt" "Photograph_white_box_geo_parentConstraint1.crt"
 		;
-connectAttr "Photograph_white_box_geo_parentConstraint1.w0" "Photograph_white_box_geo_parentConstraint1.tg[0].tw"
-		;
-connectAttr "Photograph_white_box_geo_parentConstraint1_R_Arm_03_FK_CtrlW0.o" "Photograph_white_box_geo_parentConstraint1.w0"
-		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiStandardSurface1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiStandardSurface1SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
@@ -3684,5 +4410,42 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "layerManager.dli[1]" "Background_Layer.id";
+connectAttr "file1.oc" "SkellyDadPhotoMat.base_color";
+connectAttr "SkellyDadPhotoMat.out" "aiStandardSurface1SG.ss";
+connectAttr "Photograph_white_box_geoShape.iog" "aiStandardSurface1SG.dsm" -na;
+connectAttr "aiStandardSurface1SG.msg" "materialInfo1.sg";
+connectAttr "SkellyDadPhotoMat.msg" "materialInfo1.m";
+connectAttr "file1.msg" "materialInfo1.t" -na;
+connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file1.ws";
+connectAttr "place2dTexture1.c" "file1.c";
+connectAttr "place2dTexture1.tf" "file1.tf";
+connectAttr "place2dTexture1.rf" "file1.rf";
+connectAttr "place2dTexture1.mu" "file1.mu";
+connectAttr "place2dTexture1.mv" "file1.mv";
+connectAttr "place2dTexture1.s" "file1.s";
+connectAttr "place2dTexture1.wu" "file1.wu";
+connectAttr "place2dTexture1.wv" "file1.wv";
+connectAttr "place2dTexture1.re" "file1.re";
+connectAttr "place2dTexture1.of" "file1.of";
+connectAttr "place2dTexture1.r" "file1.ro";
+connectAttr "place2dTexture1.n" "file1.n";
+connectAttr "place2dTexture1.vt1" "file1.vt1";
+connectAttr "place2dTexture1.vt2" "file1.vt2";
+connectAttr "place2dTexture1.vt3" "file1.vt3";
+connectAttr "place2dTexture1.vc1" "file1.vc1";
+connectAttr "place2dTexture1.o" "file1.uv";
+connectAttr "place2dTexture1.ofs" "file1.fs";
+connectAttr "polyPlane1.out" "polyPlanarProj1.ip";
+connectAttr "Photograph_white_box_geoShape.wm" "polyPlanarProj1.mp";
+connectAttr "polyPlanarProj1.out" "polyTweakUV1.ip";
+connectAttr "aiStandardSurface1SG.pa" ":renderPartition.st" -na;
+connectAttr "SkellyDadPhotoMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "aiAreaLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "aiAreaLight1.iog" ":defaultLightSet.dsm" -na;
 // End of SkellyPickingUpPhoto.ma
